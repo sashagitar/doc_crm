@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>createrequest</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>createrequest</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-UMLOperation"></span>
+          UMLOperation
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>CRM</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='762add597e5425d2cc02afa93f391a44.html'><span class='node-icon staruml-icon icon-UMLClass'></span>RequestsManager</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='6e182978fe0e8f6b3e917483c6e390a9.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>createrequest</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Создает новую заявку на покупку товара.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+link (str): Ссылка на товар.
+brand (str): Бренд товара.
+model (str): Модель товара.
+sku (str): Артикул товара.
+actual_price (float): Фактическая цена товара.
+split (bool): Флаг, указывающий на необходимость разделения доставки.
+delivery_type (bool): Тип доставки (True - курьерская, False - почтовая).
+address (str): Адрес доставки.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>jsonify: JSON-объект с сообщением о результате операции и идентификатором новой заявки.</code></pre>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+      <section>
+        <h3>Parameters</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Direction</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="d68e162f8f1fe847939731622aa8d892.html">session</a></td>
+            <td>Session</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="f69ba91c79c13fd05ab1cc538d0b2540.html">link</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="73546c4aaf3758a32e3e4663907d8d91.html">brand</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="f90078e827ce50cc5636ac0f8e22c5c3.html">model</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="959253a555ef56ceed74fb30de8b959f.html">sku</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="1f90cb1a003bbc49382ff59195350855.html">actual_price</a></td>
+            <td>float</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="e645a451cf53f46ad9f7f2564794a6a6.html">split</a></td>
+            <td>bool</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="b0f09110ec74021a18a2e9ca7b959feb.html">delivery_type</a></td>
+            <td>bool</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="f44d44ef59b6f0454bf36b413053d007.html">address</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>createrequest</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>stereotype</td>
+        <td><span class='label label-info'>null</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>visibility</td>
+        <td>public</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>isStatic</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isLeaf</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>parameters</td>
+        <td>
+            
+            
+            <a href='d68e162f8f1fe847939731622aa8d892.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            
+            <span>, </span>
+            <a href='f69ba91c79c13fd05ab1cc538d0b2540.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>link</a>
+            
+            <span>, </span>
+            <a href='73546c4aaf3758a32e3e4663907d8d91.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>brand</a>
+            
+            <span>, </span>
+            <a href='f90078e827ce50cc5636ac0f8e22c5c3.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>model</a>
+            
+            <span>, </span>
+            <a href='959253a555ef56ceed74fb30de8b959f.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>sku</a>
+            
+            <span>, </span>
+            <a href='1f90cb1a003bbc49382ff59195350855.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>actual_price</a>
+            
+            <span>, </span>
+            <a href='e645a451cf53f46ad9f7f2564794a6a6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>split</a>
+            
+            <span>, </span>
+            <a href='b0f09110ec74021a18a2e9ca7b959feb.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>delivery_type</a>
+            
+            <span>, </span>
+            <a href='f44d44ef59b6f0454bf36b413053d007.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>address</a>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>raisedExceptions</td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>concurrency</td>
+        <td>sequential</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isQuery</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>specification</td>
+        <td></td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+
+
+      <!-- Owned Elements -->
+
+      
+      
+
+
+    </div>
+  </body>
+</html>
