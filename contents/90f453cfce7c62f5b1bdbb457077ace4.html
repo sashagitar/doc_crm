@@ -156,97 +156,73 @@
           <tr>
             <td>public</td>
             <td><a href="3d490ffc9000aa5a037b69206b4fc6d7.html">get_user(session: Session, tg_id: int)</a></td>
-            <td><p>Получение информации о пользователе по его Telegram ID.</p>
+            <td><p>Получение информации о пользователе по его Telegram ID. Включает в себя основные данные пользователя,
+такие как полное имя, телефон, адрес, статус и адрес пункта выдачи (если задан).</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tg_id (int): Telegram ID пользователя.</code></pre>
+tgid (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Информация о пользователе в формате JSON.</code></pre></td>
+<pre><code>Dict[str, Union[int, str, None]]: Словарь с информацией о пользователе. В случае отсутствия пользователя
+                                возвращает словарь с ключом &#39;error&#39;.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
-            <td><a href="6579661d3af998ff222e77ec6d8c1945.html">create_user(session: Session, tg_id: int, login: str, username: str, phone: str, address: str)</a></td>
-            <td><p>Создание нового пользователя.</p>
+            <td><a href="36ce70aa92978361128db75fa634776a.html">set_user(session: Session, tgid: int, username: str = None, phone: str = None, city: str = None, address: str = None, pvz: int = 0)</a></td>
+            <td><p>Обновление информации о пользователе, включая его полное имя, телефон, адрес и пункт выдачи.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tg_id (int): Telegram ID пользователя.
+tgid (int): Telegram ID пользователя.
+username (str): Полное имя пользователя.
+phone (str): Номер телефона пользователя.
+address (str): Адрес пользователя.
+pvz (int, optional): Идентификатор пункта выдачи. Если не указан, значение не обновляется.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>Dict[str, Union[bool, str]]: Словарь с результатом операции. В случае успеха содержит сообщение о успешном обновлении.
+                            В случае ошибки возвращает сообщение об ошибке.</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="6579661d3af998ff222e77ec6d8c1945.html">create_user(session: Session, tgid: int, login: str, username: str, phone: str, address: str, city: str)</a></td>
+            <td><p>Создание нового пользователя с заданными параметрами. Включает в себя создание реферальной ссылки для нового пользователя.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Telegram ID пользователя.
+login (str): Логин пользователя.
 username (str): Полное имя пользователя.
 phone (str): Номер телефона пользователя.
 address (str): Адрес пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции создания пользователя в формате JSON.</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="9f4d5fa8f8712f813d35e7e5ec913cdb.html">set_num(session: Session, tgid: int, num: str)</a></td>
-            <td><p>Обновление номера телефона пользователя.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Telegram ID пользователя.
-num (str): Новый номер телефона.</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>JSON: Результат операции обновления номера телефона в формате JSON.</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="90c569788559ee4722bc014287cf7b6d.html">set_adress(session: Session, tgid: int, address: str)</a></td>
-            <td><p>Обновление адреса пользователя.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Telegram ID пользователя.
-address (str): Новый адрес пользователя.</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>JSON: Результат операции обновления адреса в формате JSON.</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="db30c53c05e789e4d84730bf18675c62.html">set_pvz(session: Session, tgid: int, pvz_id: int)</a></td>
-            <td><p>Установка пункта выдачи для пользователя.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Telegram ID пользователя.
-pvz_id (int): ID пункта выдачи.</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>JSON: Результат операции установки пункта выдачи в формате JSON.</code></pre></td>
+<pre><code>Dict[str, Union[bool, str, int]]: Словарь с результатом операции создания пользователя. В случае успеха содержит сообщение
+                                о успешном создании и статус. В случае ошибки возвращает сообщение об ошибке.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="5b7467d6e303e25f47f7ea8614361d01.html">pvz_list(session: Session, city: str = None)</a></td>
-            <td><p>Получение списка пунктов выдачи в городе.</p>
+            <td><p>Получение списка пунктов выдачи, опционально фильтруемых по городу.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-city (str, optional): Название города для фильтрации пунктов выдачи. По умолчанию None.</code></pre>
+city (str, optional): Название города для фильтрации пунктов выдачи. Если None, возвращает все пункты выдачи.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список пунктов выдачи в формате JSON.</code></pre></td>
+<pre><code>List[Dict[str, Union[int, str]]]: Список пунктов выдачи в формате JSON, каждый из которых содержит идентификатор и адрес.</code></pre></td>
           </tr>
           
         </table>

@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">« Dict[str, Union[str, int, None]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='e1e2d3c59ba7b525a44e7cd021097147.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='063b6f3628da6de2afcfbd5b4fb67f04.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>check</a></span>
+          <span class="label label-info"><a href='063b6f3628da6de2afcfbd5b4fb67f04.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>« Dict[str, Union[str, int, None]]»check</a></span>
         
       </section>
 
@@ -70,7 +72,8 @@ id_pay (int): Идентификатор платежа.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Объект JSON, содержащий статус платежа и время ожидания.</code></pre>
+<pre><code>Dict[str, Union[str, int, None]]: Статус платежа и время ожидания, если платеж найден.
+                                В противном случае возвращает сообщение об ошибке.</code></pre>
           
         </div>
       </section>
@@ -266,7 +269,7 @@ id_pay (int): Идентификатор платежа.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td> Dict[str, Union[str, int, None]]</td>
     </tr>
     
     

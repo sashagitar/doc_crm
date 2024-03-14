@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[bool, str, int]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='e1e2d3c59ba7b525a44e7cd021097147.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='39afaf9c143459ed3b0a7fe19579bbfd.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>create_payment</a></span>
+          <span class="label label-info"><a href='39afaf9c143459ed3b0a7fe19579bbfd.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[bool, str, int]]»create_payment</a></span>
         
       </section>
 
@@ -61,18 +63,18 @@
         <h3>Description</h3>
         <div>
           
-            <p>Создание оплаты на основе заявки и реквизита.</p>
+            <p>Создание оплаты на основе заявки и реквизита, с возможностью указания шага оплаты.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 request_id (int): Идентификатор заявки.
-card_number (str): Номер карты для оплаты.
-step (float, optional): Шаг оплаты. Defaults to 0.</code></pre>
+requisite_id (int): Идентификатор реквизита.
+step (float, optional): Шаг оплаты. По умолчанию равен 0.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции в формате JSON.</code></pre>
+<pre><code>Dict[str, Union[bool, str, int]]: Результат создания оплаты, включая успех операции, сообщение и идентификатор оплаты.</code></pre>
           
         </div>
       </section>
@@ -291,7 +293,7 @@ step (float, optional): Шаг оплаты. Defaults to 0.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[bool, str, int]]</td>
     </tr>
     
     

@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[str, int, float]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='85f1f8d592cd11ca3ee48a3aff7c3e9e.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>info</a></span>
+          <span class="label label-info"><a href='85f1f8d592cd11ca3ee48a3aff7c3e9e.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[str, int, float]]»info</a></span>
         
       </section>
 
@@ -63,15 +65,18 @@
           
             <p>Получение информации о заявке по её идентификатору.</p>
 
-<p>Args:</p>
+<p>Параметры:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор Telegram пользователя.
 id_request (int): Идентификатор заявки.</code></pre>
 
-<p>Returns:</p>
+<p>Возвращает:</p>
 
-<pre><code>JSON: Информация о заявке в формате JSON.</code></pre>
+<pre><code>Dict[str, Union[str, int, float]]: Детальная информация о заявке в формате JSON,
+                                включая идентификатор, ссылку, бренд, модель,
+                                SKU, размер, дату создания, актуальную и окончательную стоимость,
+                                статус доставки, название категории, и другую информацию.</code></pre>
           
         </div>
       </section>
@@ -274,7 +279,7 @@ id_request (int): Идентификатор заявки.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[str, int, float]]</td>
     </tr>
     
     

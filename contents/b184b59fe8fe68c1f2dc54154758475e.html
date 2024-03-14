@@ -155,10 +155,35 @@
           
           <tr>
             <td>public</td>
-            <td><a href="0fd7de1b51df062338e6382316d60e9b.html">calculate_product(session: Session, tgid: int, link: str, size: str, cost: float, category_id: int)</a></td>
-            <td><p>Создание товара и добавление его в расчитанные пользователя.</p>
+            <td><a href="888c0450d2c26a1458c79a34adf20164.html">__get_image_filenames(product_id: int)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="51045224442bfd91e0dec4fc6424750b.html">get_categories(session: Session)</a></td>
+            <td><p>Получение списка категорий товаров из базы данных.</p>
 
-<p>Args:</p>
+<p>Данный метод запрашивает у сессии базы данных все записи категорий и
+возвращает их в виде списка словарей, содержащих идентификатор и имя категории.</p>
+
+<p>Параметры:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+
+<p>Возвращает:</p>
+
+<pre><code>List[Dict[str, any]]: Список словарей, где каждый словарь представляет категорию.
+                    Ключ &#39;id&#39; хранит идентификатор категории (int),
+                    ключ &#39;name&#39; хранит название категории (str).</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="0fd7de1b51df062338e6382316d60e9b.html">calculate_product(session: Session, tgid: int, link: str, size: str, cost: float, category_id: int)</a></td>
+            <td><p>Создание товара и добавление его в расчетные для пользователя.</p>
+
+<p>Параметры:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор Telegram пользователя.
@@ -167,24 +192,40 @@ size (str): Размер товара.
 cost (float): Стоимость товара.
 category_id (int): Идентификатор категории товара.</code></pre>
 
-<p>Returns:</p>
+<p>Возвращает:</p>
 
-<pre><code>JSON: Результат операции в формате JSON.</code></pre></td>
+<pre><code>Dict[str, Union[bool, str, int]]: Результат операции в формате JSON, содержащий статус операции,</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="5758060634143231974b6644573b0ead.html">delete_calculated_product(session: Session, tgid: int, product_id: int)</a></td>
+            <td><p>Удаление расчетного товара по его идентификатору для конкретного пользователя.</p>
+
+<p>Параметры:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Идентификатор пользователя Telegram.
+product_id (int): Идентификатор расчетного товара, который нужно удалить.</code></pre>
+
+<p>Возвращает:</p>
+
+<pre><code>Dict[str, Union[bool, str]]: Результат операции удаления в формате JSON, содержащий статус операции и сообщение.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="830d436deee7361dcb19623251b8cd3e.html">buylist_activ(session: Session, tgid: int)</a></td>
-            <td><p>Получение активных заявок пользователя.</p>
+            <td><p>Получение списка активных заявок пользователя.</p>
 
-<p>Args:</p>
+<p>Параметры:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных. 
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор Telegram пользователя.</code></pre>
 
-<p>Returns:</p>
+<p>Возвращает:</p>
 
-<pre><code>JSON: Список активных заявок пользователя в формате JSON.</code></pre></td>
+<pre><code>List[Dict[str, Union[int, str, float]]]: Список активных заявок пользователя в формате JSON, включая идентификатор заявки, ссылку, бренд, модель, SKU, размер, дату создания, актуальную и окончательную стоимость, статус доставки, название категории, и другую информацию.</code></pre></td>
           </tr>
           
           <tr>
@@ -192,15 +233,18 @@ tgid (int): Идентификатор Telegram пользователя.</code>
             <td><a href="85f1f8d592cd11ca3ee48a3aff7c3e9e.html">info(session: Session, tgid: int, id_request: int)</a></td>
             <td><p>Получение информации о заявке по её идентификатору.</p>
 
-<p>Args:</p>
+<p>Параметры:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор Telegram пользователя.
 id_request (int): Идентификатор заявки.</code></pre>
 
-<p>Returns:</p>
+<p>Возвращает:</p>
 
-<pre><code>JSON: Информация о заявке в формате JSON.</code></pre></td>
+<pre><code>Dict[str, Union[str, int, float]]: Детальная информация о заявке в формате JSON,
+                                включая идентификатор, ссылку, бренд, модель,
+                                SKU, размер, дату создания, актуальную и окончательную стоимость,
+                                статус доставки, название категории, и другую информацию.</code></pre></td>
           </tr>
           
           <tr>
@@ -208,100 +252,116 @@ id_request (int): Идентификатор заявки.</code></pre>
             <td><a href="fad31114205555dbd7fc5c11a4741ef6.html">prod_list(session: Session, count: int, page: int, filters: dict = {})</a></td>
             <td><p>Получение списка видимых и неархивированных товаров по фильтрам с пагинацией.</p>
 
-<p>Args:</p>
+<p>Параметры:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-filters (dict): Фильтры для запроса товаров.
-count (int): Количество товаров на странице.
-page (int): Номер страницы.</code></pre>
+count (int): Количество товаров на страницу.
+page (int): Номер страницы.
+filters (dict, optional): Словарь фильтров для применения к запросу.</code></pre>
 
-<p>Returns:</p>
+<p>Возвращает:</p>
 
-<pre><code>JSON: Список товаров и информация о пагинации в формате JSON.</code></pre></td>
+<pre><code>Dict[str, Any]: Список товаров и информация о пагинации в формате JSON,
+                включая общее количество товаров, номер текущей страницы,
+                количество товаров на страницу и список товаров.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="3a59bb7bb52c980de27247a02bbc5de3.html">product(session: Session, user_id: int, id_prod: int)</a></td>
-            <td><p>Получение информации о конкретном товаре по его идентификатору.</p>
+            <td><p>Получение детальной информации о конкретном товаре по его идентификатору для указанного пользователя.
+Включает в себя проверку на существование пользователя и товара, добавление товара в список просмотренных,
+и возвращает расширенную информацию о товаре, включая доступные размеры и вкладки с дополнительной информацией.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Идентификатор пользователя Telegram.
 id_prod (int): Идентификатор товара.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Информация о товаре в формате JSON.
-    </code></pre></td>
+<pre><code>Dict[str, Union[str, int, List[Dict[str, Union[str, float]]]]]: Словарь с информацией о товаре,
+включая его идентификатор, ссылку, бренд, модель, SKU, категорию, доступные размеры и вкладки.
+В случае ошибки возвращает сообщение об ошибке.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="6f01144bbaa0576ba217ecb4a7a03de0.html">calculated(session: Session, tgid: int, count: int, page: int)</a></td>
-            <td><p>Получение списка расчитанных товаров пользователя с пагинацией.</p>
+            <td><p>Получение списка расчитанных товаров пользователя с пагинацией. Возвращает информацию о каждом расчитанном товаре,
+включая минимальную цену из доступных размеров.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Идентификатор Telegram пользователя.
-count (int): Количество товаров на странице.
-page (int): Номер страницы.</code></pre>
+tgid (int): Идентификатор пользователя Telegram.
+count (int): Количество товаров на страницу.
+page (int): Номер страницы для пагинации.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список расчитанных товаров пользователя в формате JSON.</code></pre></td>
+<pre><code>List[Dict[str, Union[str, int, float]]]: Список расчитанных товаров в формате JSON,
+содержащий информацию о каждом товаре, включая идентификатор, ссылку, бренд, модель,
+SKU, категорию и минимальную цену. В случае ошибки возвращает пустой список.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="a049f965e7a203c5dd5b64ea97d8753e.html">buylist_history(session: Session, tgid: int)</a></td>
-            <td><p>Получение закрытых заявок пользователя.</p>
+            <td><p>Получение списка закрытых (исторических) заявок пользователя. Функция возвращает информацию
+о каждой заявке, включая идентификатор заявки, ссылку, бренд, модель, SKU, размер, 
+актуальную цену, и статус доставки.</p>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Идентификатор Telegram пользователя.</code></pre>
+<pre><code>session (Session): Сессия для выполнения запросов к базе данных.
+tgid (int): Идентификатор пользователя в Telegram.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список закрытых заявок пользователя в формате JSON.</code></pre></td>
+<pre><code>List[Dict[str, Union[int, str]]]: Список закрытых заявок в формате JSON. 
+В случае отсутствия пользователя возвращает список с сообщением об ошибке.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="f59d17aac9b382644c7f266ea51238f1.html">create_request(session: Session, tgid: int, id_prod: int, delivery_type_id: int, split: bool, bonus: bool = False)</a></td>
-            <td><p>Создание заявки на основе продукта.</p>
+            <td><p>Создание новой заявки на товар для пользователя. Опционально можно указать, 
+будет ли использоваться бонус за покупку и необходимость разделения заказа на части.</p>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Идентификатор Telegram пользователя.
+<pre><code>session (Session): Сессия для выполнения запросов к базе данных.
+tgid (int): Идентификатор пользователя Telegram.
 id_prod (int): Идентификатор продукта.
 delivery_type_id (int): Идентификатор типа доставки.
-split (bool): Флаг разделения заказа.
-bonus (bool, optional): Флаг использования бонусов. Defaults to False.</code></pre>
+split (bool): Необходимость разделения заказа на части.
+bonus (bool, optional): Флаг использования бонусов для оплаты. По умолчанию False.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции в формате JSON. </code></pre></td>
+<pre><code>Dict[str, Union[bool, str]]: Словарь с результатом создания заявки, содержащий статус операции
+и сообщение об успехе или ошибке. В случае ошибки возвращает соответствующее сообщение.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="3b5308772c6b6638bc362f9b812033de.html">viewed_products(session: Session, user_id: int, page: int, per_page: int)</a></td>
-            <td><p>Возвращает список просмотренных продуктов пользователя с пагинацией.</p>
+            <td><p>Получение списка просмотренных продуктов пользователя с пагинацией. Включает информацию о каждом 
+просмотренном продукте, такую как идентификатор, модель, бренд, SKU, категорию, и цену.</p>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-user_id (int): Идентификатор пользователя.
-page (int): Номер страницы.
-per_page (int): Количество элементов на странице.</code></pre>
+<pre><code>session (Session): Сессия для выполнения запросов к базе данных.
+tgid (int): Идентификатор пользователя в Telegram.
+page (int): Номер текущей страницы для пагинации.
+count (int): Количество элементов на страницу.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Список просмотренных продуктов в формате JSON.</code></pre></td>
+<pre><code>Dict[str, Any]: Словарь, содержащий общее количество просмотренных продуктов, информацию о пагинации,
+и список просмотренных продуктов. В случае ошибки возвращает сообщение об ошибке.</code></pre></td>
           </tr>
           
         </table>

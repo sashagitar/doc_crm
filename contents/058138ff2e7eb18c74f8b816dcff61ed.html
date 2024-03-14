@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[bool, str, int]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='fb58e4c74e55a4b2a8f16aa6f58ffe32.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BonusMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='058138ff2e7eb18c74f8b816dcff61ed.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>hello</a></span>
+          <span class="label label-info"><a href='058138ff2e7eb18c74f8b816dcff61ed.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[bool, str, int]]»hello</a></span>
         
       </section>
 
@@ -61,7 +63,11 @@
         <h3>Description</h3>
         <div>
           
-            <p>Приветственный бонус за реферальную ссылку.</p>
+            <p>Приветственный бонус за использование реферальной ссылки.</p>
+
+<p>Поиск в базе данных пользователя, связанного с предоставленной реферальной ссылкой.
+В случае успеха пользователю начисляются бонусные баллы, и операция завершается сообщением об успехе.
+В противном случае возвращается сообщение об ошибке.</p>
 
 <p>Args:</p>
 
@@ -70,7 +76,8 @@ link (str): Реферальная ссылка.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции добавления бонусов в формате JSON.</code></pre>
+<pre><code>Dict[str, Union[bool, str, int]]: Результат операции в формате JSON. В случае успешного добавления бонусов
+возвращает ключ &#39;success&#39; со значением True и сообщение об успехе. В случае ошибки возвращает ключ &#39;error&#39;   и соответствующее сообщение об ошибке.</code></pre>
           
         </div>
       </section>
@@ -266,7 +273,7 @@ link (str): Реферальная ссылка.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[bool, str, int]]</td>
     </tr>
     
     

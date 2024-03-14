@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«List[Dict[str, Union[int, str]]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='a049f965e7a203c5dd5b64ea97d8753e.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>buylist_history</a></span>
+          <span class="label label-info"><a href='a049f965e7a203c5dd5b64ea97d8753e.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«List[Dict[str, Union[int, str]]]»buylist_history</a></span>
         
       </section>
 
@@ -61,16 +63,19 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получение закрытых заявок пользователя.</p>
+            <p>Получение списка закрытых (исторических) заявок пользователя. Функция возвращает информацию
+о каждой заявке, включая идентификатор заявки, ссылку, бренд, модель, SKU, размер, 
+актуальную цену, и статус доставки.</p>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Идентификатор Telegram пользователя.</code></pre>
+<pre><code>session (Session): Сессия для выполнения запросов к базе данных.
+tgid (int): Идентификатор пользователя в Telegram.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список закрытых заявок пользователя в формате JSON.</code></pre>
+<pre><code>List[Dict[str, Union[int, str]]]: Список закрытых заявок в формате JSON. 
+В случае отсутствия пользователя возвращает список с сообщением об ошибке.</code></pre>
           
         </div>
       </section>
@@ -273,7 +278,7 @@ tgid (int): Идентификатор Telegram пользователя.</code>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>List[Dict[str, Union[int, str]]]</td>
     </tr>
     
     

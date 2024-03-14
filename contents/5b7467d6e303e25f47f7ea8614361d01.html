@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«List[Dict[str, Union[int, str]]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='90f453cfce7c62f5b1bdbb457077ace4.html'><span class='node-icon staruml-icon icon-UMLClass'></span>UserMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='5b7467d6e303e25f47f7ea8614361d01.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>pvz_list</a></span>
+          <span class="label label-info"><a href='5b7467d6e303e25f47f7ea8614361d01.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«List[Dict[str, Union[int, str]]]»pvz_list</a></span>
         
       </section>
 
@@ -61,16 +63,16 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получение списка пунктов выдачи в городе.</p>
+            <p>Получение списка пунктов выдачи, опционально фильтруемых по городу.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-city (str, optional): Название города для фильтрации пунктов выдачи. По умолчанию None.</code></pre>
+city (str, optional): Название города для фильтрации пунктов выдачи. Если None, возвращает все пункты выдачи.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список пунктов выдачи в формате JSON.</code></pre>
+<pre><code>List[Dict[str, Union[int, str]]]: Список пунктов выдачи в формате JSON, каждый из которых содержит идентификатор и адрес.</code></pre>
           
         </div>
       </section>
@@ -266,7 +268,7 @@ city (str, optional): Название города для фильтрации 
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>List[Dict[str, Union[int, str]]]</td>
     </tr>
     
     

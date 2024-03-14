@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[bool, str, int]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='90f453cfce7c62f5b1bdbb457077ace4.html'><span class='node-icon staruml-icon icon-UMLClass'></span>UserMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='6579661d3af998ff222e77ec6d8c1945.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>create_user</a></span>
+          <span class="label label-info"><a href='6579661d3af998ff222e77ec6d8c1945.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[bool, str, int]]»create_user</a></span>
         
       </section>
 
@@ -61,19 +63,21 @@
         <h3>Description</h3>
         <div>
           
-            <p>Создание нового пользователя.</p>
+            <p>Создание нового пользователя с заданными параметрами. Включает в себя создание реферальной ссылки для нового пользователя.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tg_id (int): Telegram ID пользователя.
+tgid (int): Telegram ID пользователя.
+login (str): Логин пользователя.
 username (str): Полное имя пользователя.
 phone (str): Номер телефона пользователя.
 address (str): Адрес пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции создания пользователя в формате JSON.</code></pre>
+<pre><code>Dict[str, Union[bool, str, int]]: Словарь с результатом операции создания пользователя. В случае успеха содержит сообщение
+                                о успешном создании и статус. В случае ошибки возвращает сообщение об ошибке.</code></pre>
           
         </div>
       </section>
@@ -161,7 +165,7 @@ address (str): Адрес пользователя.</code></pre>
           
           <tr>
             <td>in</td>
-            <td><a href="471912875832ea0a9bc1fcf233f40a62.html">tg_id</a></td>
+            <td><a href="471912875832ea0a9bc1fcf233f40a62.html">tgid</a></td>
             <td>int</td>
             <td></td>
           </tr>
@@ -190,6 +194,13 @@ address (str): Адрес пользователя.</code></pre>
           <tr>
             <td>in</td>
             <td><a href="b0261f1569d1e48fd0fa30a0e8f57e33.html">address</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="5e9d5daec49d9b6893ef411e321a76fa.html">city</a></td>
             <td>str</td>
             <td></td>
           </tr>
@@ -297,7 +308,7 @@ address (str): Адрес пользователя.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[bool, str, int]]</td>
     </tr>
     
     
@@ -341,7 +352,7 @@ address (str): Адрес пользователя.</code></pre>
             <a href='d97a2f71042cd454254462a2905011b7.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='471912875832ea0a9bc1fcf233f40a62.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tg_id</a>
+            <a href='471912875832ea0a9bc1fcf233f40a62.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
             
             <span>, </span>
             <a href='aef0d75c375b4dd3b1baf36bf2bca17c.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>login</a>
@@ -354,6 +365,9 @@ address (str): Адрес пользователя.</code></pre>
             
             <span>, </span>
             <a href='b0261f1569d1e48fd0fa30a0e8f57e33.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>address</a>
+            
+            <span>, </span>
+            <a href='5e9d5daec49d9b6893ef411e321a76fa.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>city</a>
             
         </td>
     </tr>

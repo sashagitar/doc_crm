@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>set_user</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>set_user</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-UMLOperation"></span>
+          UMLOperation
+        </span>
+        
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[bool, str]]»</span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>CRM</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='90f453cfce7c62f5b1bdbb457077ace4.html'><span class='node-icon staruml-icon icon-UMLClass'></span>UserMngr</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='36ce70aa92978361128db75fa634776a.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[bool, str]]»set_user</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Обновление информации о пользователе, включая его полное имя, телефон, адрес и пункт выдачи.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Telegram ID пользователя.
+username (str): Полное имя пользователя.
+phone (str): Номер телефона пользователя.
+address (str): Адрес пользователя.
+pvz (int, optional): Идентификатор пункта выдачи. Если не указан, значение не обновляется.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>Dict[str, Union[bool, str]]: Словарь с результатом операции. В случае успеха содержит сообщение о успешном обновлении.
+                            В случае ошибки возвращает сообщение об ошибке.</code></pre>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+      <section>
+        <h3>Parameters</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Direction</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="4ba0358f58cc3302422a001720a8ae0c.html">session</a></td>
+            <td>Session</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="74f01565a3d291d9d7972293b1cf943b.html">tgid</a></td>
+            <td>int</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="959143658978264928082bc2acb2f99c.html">username</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="c1e9306820e1479af6aebfbb015e85db.html">phone</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="75cda93f09378b471a3129d232c38da5.html">city</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="dd450dbae21ff43b87802d55301b10c8.html">address</a></td>
+            <td>str</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="3f23ee636ffc9ae8949a61aa98ffb513.html">pvz</a></td>
+            <td>int</td>
+            <td></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>set_user</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>stereotype</td>
+        <td>Dict[str, Union[bool, str]]</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>visibility</td>
+        <td>public</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>isStatic</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isLeaf</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>parameters</td>
+        <td>
+            
+            
+            <a href='4ba0358f58cc3302422a001720a8ae0c.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            
+            <span>, </span>
+            <a href='74f01565a3d291d9d7972293b1cf943b.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
+            
+            <span>, </span>
+            <a href='959143658978264928082bc2acb2f99c.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>username</a>
+            
+            <span>, </span>
+            <a href='c1e9306820e1479af6aebfbb015e85db.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>phone</a>
+            
+            <span>, </span>
+            <a href='75cda93f09378b471a3129d232c38da5.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>city</a>
+            
+            <span>, </span>
+            <a href='dd450dbae21ff43b87802d55301b10c8.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>address</a>
+            
+            <span>, </span>
+            <a href='3f23ee636ffc9ae8949a61aa98ffb513.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>pvz</a>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>raisedExceptions</td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>concurrency</td>
+        <td>sequential</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isQuery</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>specification</td>
+        <td></td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+
+
+      <!-- Owned Elements -->
+
+      
+      
+
+
+    </div>
+  </body>
+</html>

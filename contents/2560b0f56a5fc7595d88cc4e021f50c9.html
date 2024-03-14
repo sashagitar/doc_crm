@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[bool, List[str], str]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='fb58e4c74e55a4b2a8f16aa6f58ffe32.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BonusMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='2560b0f56a5fc7595d88cc4e021f50c9.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>ref_links</a></span>
+          <span class="label label-info"><a href='2560b0f56a5fc7595d88cc4e021f50c9.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[bool, List[str], str]]»ref_links</a></span>
         
       </section>
 
@@ -63,6 +65,9 @@
           
             <p>Возвращает все реферальные ссылки пользователя на основе его Telegram ID.</p>
 
+<p>В случае нахождения пользователя в базе, метод собирает и возвращает все его реферальные ссылки.
+Если пользователь не найден, возвращается соответствующее сообщение об ошибке.</p>
+
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
@@ -70,7 +75,9 @@ tgid (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>list: Список сформированных реферальных ссылок.</code></pre>
+<pre><code>Dict[str, Union[bool, List[str], str]]: Словарь, содержащий результат операции. В случае успеха
+возвращает ключ &#39;success&#39; со значением True и список ссылок под ключом &#39;referal_links&#39;.
+В случае неудачи возвращает ключ &#39;success&#39; со значением False и сообщение об ошибке под ключом &#39;message&#39;.</code></pre>
           
         </div>
       </section>
@@ -266,7 +273,7 @@ tgid (int): Telegram ID пользователя.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[bool, List[str], str]]</td>
     </tr>
     
     

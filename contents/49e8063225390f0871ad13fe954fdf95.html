@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[bool, float]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='fb58e4c74e55a4b2a8f16aa6f58ffe32.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BonusMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='49e8063225390f0871ad13fe954fdf95.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>count_bonus</a></span>
+          <span class="label label-info"><a href='49e8063225390f0871ad13fe954fdf95.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[bool, float]]»count_bonus</a></span>
         
       </section>
 
@@ -61,7 +63,10 @@
         <h3>Description</h3>
         <div>
           
-            <p>Подсчитывает сумму бонусов для заданного пользователя.</p>
+            <p>Подсчитывает общее количество бонусных баллов для заданного пользователя.</p>
+
+<p>Вычисляет и возвращает общую сумму бонусных баллов, накопленных пользователем.
+В случае отсутствия бонусов возвращает ноль.</p>
 
 <p>Args:</p>
 
@@ -70,7 +75,8 @@ tgid (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Объект JSON, содержащий общую сумму бонусов пользователя.</code></pre>
+<pre><code>Dict[str, Union[bool, float]]: Словарь с ключом &#39;success&#39; со значением True и общей суммой бонусов
+пользователя под ключом &#39;total_bonus&#39;.</code></pre>
           
         </div>
       </section>
@@ -266,7 +272,7 @@ tgid (int): Telegram ID пользователя.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[bool, float]]</td>
     </tr>
     
     

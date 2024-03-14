@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[str, int, List[Dict[str, Union[str, float]]]]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='3a59bb7bb52c980de27247a02bbc5de3.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>product</a></span>
+          <span class="label label-info"><a href='3a59bb7bb52c980de27247a02bbc5de3.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[str, int, List[Dict[str, Union[str, float]]]]]»product</a></span>
         
       </section>
 
@@ -61,17 +63,21 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получение информации о конкретном товаре по его идентификатору.</p>
+            <p>Получение детальной информации о конкретном товаре по его идентификатору для указанного пользователя.
+Включает в себя проверку на существование пользователя и товара, добавление товара в список просмотренных,
+и возвращает расширенную информацию о товаре, включая доступные размеры и вкладки с дополнительной информацией.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Идентификатор пользователя Telegram.
 id_prod (int): Идентификатор товара.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Информация о товаре в формате JSON.
-    </code></pre>
+<pre><code>Dict[str, Union[str, int, List[Dict[str, Union[str, float]]]]]: Словарь с информацией о товаре,
+включая его идентификатор, ссылку, бренд, модель, SKU, категорию, доступные размеры и вкладки.
+В случае ошибки возвращает сообщение об ошибке.</code></pre>
           
         </div>
       </section>
@@ -274,7 +280,7 @@ id_prod (int): Идентификатор товара.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[str, int, List[Dict[str, Union[str, float]]]]]</td>
     </tr>
     
     

@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[int, str, float]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='e1e2d3c59ba7b525a44e7cd021097147.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='a7a704329a552ea543f3b5316f563dfc.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>get_requisite</a></span>
+          <span class="label label-info"><a href='a7a704329a552ea543f3b5316f563dfc.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[int, str, float]]»get_requisite</a></span>
         
       </section>
 
@@ -61,17 +63,19 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получает реквизит с максимальным received из указанного банка,и делает его невидимым, если сумма received и step превышает лимит.</p>
+            <p>Получает реквизит с максимальным received из указанного банка, и делает его невидимым,
+если сумма received и step превышает лимит.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 bank_id (int): Идентификатор банка.
-step (float): Шаг, который должен влезать в received.</code></pre>
+step (float): Шаг, который должен уместиться в оставшийся лимит received.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>Response: Реквизит с максимальным received в формате JSON или сообщение об ошибке.</code></pre>
+<pre><code>Dict[str, Union[int, str, float]]: Реквизит с максимальным received или сообщение об ошибке.
+                                Включает идентификатор реквизита, номер карты и время ожидания.</code></pre>
           
         </div>
       </section>
@@ -283,7 +287,7 @@ step (float): Шаг, который должен влезать в received.</c
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[int, str, float]]</td>
     </tr>
     
     

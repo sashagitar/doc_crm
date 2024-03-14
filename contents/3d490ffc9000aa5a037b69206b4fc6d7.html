@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Union[int, str, None]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='90f453cfce7c62f5b1bdbb457077ace4.html'><span class='node-icon staruml-icon icon-UMLClass'></span>UserMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='3d490ffc9000aa5a037b69206b4fc6d7.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>get_user</a></span>
+          <span class="label label-info"><a href='3d490ffc9000aa5a037b69206b4fc6d7.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Union[int, str, None]]»get_user</a></span>
         
       </section>
 
@@ -61,16 +63,18 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получение информации о пользователе по его Telegram ID.</p>
+            <p>Получение информации о пользователе по его Telegram ID. Включает в себя основные данные пользователя,
+такие как полное имя, телефон, адрес, статус и адрес пункта выдачи (если задан).</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tg_id (int): Telegram ID пользователя.</code></pre>
+tgid (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Информация о пользователе в формате JSON.</code></pre>
+<pre><code>Dict[str, Union[int, str, None]]: Словарь с информацией о пользователе. В случае отсутствия пользователя
+                                возвращает словарь с ключом &#39;error&#39;.</code></pre>
           
         </div>
       </section>
@@ -273,7 +277,7 @@ tg_id (int): Telegram ID пользователя.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Union[int, str, None]]</td>
     </tr>
     
     

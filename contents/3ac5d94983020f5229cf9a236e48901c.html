@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«Dict[str, Any]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='fb58e4c74e55a4b2a8f16aa6f58ffe32.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BonusMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='3ac5d94983020f5229cf9a236e48901c.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>history</a></span>
+          <span class="label label-info"><a href='3ac5d94983020f5229cf9a236e48901c.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«Dict[str, Any]»history</a></span>
         
       </section>
 
@@ -61,18 +63,18 @@
         <h3>Description</h3>
         <div>
           
-            <p>Возвращает историю бонусов пользователя с пагинацией.</p>
+            <p>Возвращает историю бонусных операций пользователя с учетом пагинации. История включает в себя информацию о транзакциях по начислению и списанию бонусов, связанных с покупками.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Telegram ID пользователя.
-page (int): Номер страницы для пагинации.
-per_page (int): Количество записей на одной странице.</code></pre>
+page (int, optional): Номер страницы. По умолчанию равен 1.
+per_page (int, optional): Количество записей на страницу. По умолчанию равно 10.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Объект JSON с историей бонусов, информацией о текущей странице и общим количеством записей</code></pre>
+<pre><code>Dict[str, Any]: Объект JSON, содержащий список транзакций бонусных операций, общее количество записей, текущую страницу, общее количество страниц, и количество записей на страницу.</code></pre>
           
         </div>
       </section>
@@ -282,7 +284,7 @@ per_page (int): Количество записей на одной страни
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>Dict[str, Any]</td>
     </tr>
     
     

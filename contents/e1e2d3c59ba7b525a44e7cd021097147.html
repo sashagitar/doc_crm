@@ -164,40 +164,43 @@
 
 <p>Returns:</p>
 
-<pre><code>Response: Список всех видимых банков в формате JSON.</code></pre></td>
+<pre><code>List[Dict[str, Union[int, str, bool]]]: Список словарей, где каждый словарь содержит
+                                        информацию о банке: его идентификатор, название и видимость.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="a7a704329a552ea543f3b5316f563dfc.html">get_requisite(session: Session, bank_id: int, step: float)</a></td>
-            <td><p>Получает реквизит с максимальным received из указанного банка,и делает его невидимым, если сумма received и step превышает лимит.</p>
+            <td><p>Получает реквизит с максимальным received из указанного банка, и делает его невидимым,
+если сумма received и step превышает лимит.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 bank_id (int): Идентификатор банка.
-step (float): Шаг, который должен влезать в received.</code></pre>
+step (float): Шаг, который должен уместиться в оставшийся лимит received.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>Response: Реквизит с максимальным received в формате JSON или сообщение об ошибке.</code></pre></td>
+<pre><code>Dict[str, Union[int, str, float]]: Реквизит с максимальным received или сообщение об ошибке.
+                                Включает идентификатор реквизита, номер карты и время ожидания.</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
             <td><a href="39afaf9c143459ed3b0a7fe19579bbfd.html">create_payment(session: Session, request_id: int, requisite_id: int, step: float = 0)</a></td>
-            <td><p>Создание оплаты на основе заявки и реквизита.</p>
+            <td><p>Создание оплаты на основе заявки и реквизита, с возможностью указания шага оплаты.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 request_id (int): Идентификатор заявки.
-card_number (str): Номер карты для оплаты.
-step (float, optional): Шаг оплаты. Defaults to 0.</code></pre>
+requisite_id (int): Идентификатор реквизита.
+step (float, optional): Шаг оплаты. По умолчанию равен 0.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции в формате JSON.</code></pre></td>
+<pre><code>Dict[str, Union[bool, str, int]]: Результат создания оплаты, включая успех операции, сообщение и идентификатор оплаты.</code></pre></td>
           </tr>
           
           <tr>
@@ -212,7 +215,8 @@ id_pay (int): Идентификатор платежа.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Объект JSON, содержащий статус платежа и время ожидания.</code></pre></td>
+<pre><code>Dict[str, Union[str, int, None]]: Статус платежа и время ожидания, если платеж найден.
+                                В противном случае возвращает сообщение об ошибке.</code></pre></td>
           </tr>
           
         </table>

@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«List[Dict[str, Union[int, str, float]]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='830d436deee7361dcb19623251b8cd3e.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>buylist_activ</a></span>
+          <span class="label label-info"><a href='830d436deee7361dcb19623251b8cd3e.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«List[Dict[str, Union[int, str, float]]]»buylist_activ</a></span>
         
       </section>
 
@@ -61,16 +63,16 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получение активных заявок пользователя.</p>
+            <p>Получение списка активных заявок пользователя.</p>
 
-<p>Args:</p>
+<p>Параметры:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных. 
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор Telegram пользователя.</code></pre>
 
-<p>Returns:</p>
+<p>Возвращает:</p>
 
-<pre><code>JSON: Список активных заявок пользователя в формате JSON.</code></pre>
+<pre><code>List[Dict[str, Union[int, str, float]]]: Список активных заявок пользователя в формате JSON, включая идентификатор заявки, ссылку, бренд, модель, SKU, размер, дату создания, актуальную и окончательную стоимость, статус доставки, название категории, и другую информацию.</code></pre>
           
         </div>
       </section>
@@ -273,7 +275,7 @@ tgid (int): Идентификатор Telegram пользователя.</code>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>List[Dict[str, Union[int, str, float]]]</td>
     </tr>
     
     

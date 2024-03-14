@@ -28,6 +28,8 @@
           UMLOperation
         </span>
         
+          <span style="margin-left: 10px" class="alert alert-info">«List[Dict[str, Union[str, int, float]]]»</span>
+        
       </section>
 
       <!-- Path -->
@@ -46,7 +48,7 @@
           <span class="label label-info"><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='6f01144bbaa0576ba217ecb4a7a03de0.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>calculated</a></span>
+          <span class="label label-info"><a href='6f01144bbaa0576ba217ecb4a7a03de0.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>«List[Dict[str, Union[str, int, float]]]»calculated</a></span>
         
       </section>
 
@@ -61,18 +63,21 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получение списка расчитанных товаров пользователя с пагинацией.</p>
+            <p>Получение списка расчитанных товаров пользователя с пагинацией. Возвращает информацию о каждом расчитанном товаре,
+включая минимальную цену из доступных размеров.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Идентификатор Telegram пользователя.
-count (int): Количество товаров на странице.
-page (int): Номер страницы.</code></pre>
+tgid (int): Идентификатор пользователя Telegram.
+count (int): Количество товаров на страницу.
+page (int): Номер страницы для пагинации.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список расчитанных товаров пользователя в формате JSON.</code></pre>
+<pre><code>List[Dict[str, Union[str, int, float]]]: Список расчитанных товаров в формате JSON,
+содержащий информацию о каждом товаре, включая идентификатор, ссылку, бренд, модель,
+SKU, категорию и минимальную цену. В случае ошибки возвращает пустой список.</code></pre>
           
         </div>
       </section>
@@ -282,7 +287,7 @@ page (int): Номер страницы.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td>List[Dict[str, Union[str, int, float]]]</td>
     </tr>
     
     
