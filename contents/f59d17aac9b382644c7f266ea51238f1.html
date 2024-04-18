@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -70,7 +71,7 @@
 
 <pre><code>session (Session): Сессия для выполнения запросов к базе данных.
 tgid (int): Идентификатор пользователя Telegram.
-id_prod (int): Идентификатор продукта.
+prod_id (int): Идентификатор продукта.
 delivery_type_id (int): Идентификатор типа доставки.
 split (bool): Необходимость разделения заказа на части.
 bonus (bool, optional): Флаг использования бонусов для оплаты. По умолчанию False.</code></pre>
@@ -160,42 +161,42 @@ bonus (bool, optional): Флаг использования бонусов дл�
           <tr>
             <td>in</td>
             <td><a href="50e6813cf4d4e8109f1c5b0a55982a78.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="37ca0634ed3603ae7f11cc6cc265697f.html">tgid</a></td>
-            <td>int</td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="c4bc7028e66756d777e644f856bb11ef.html">id_prod</a></td>
-            <td>int</td>
+            <td><a href="c4bc7028e66756d777e644f856bb11ef.html">prod_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="8382526be7c57345683b76e601eb3219.html">delivery_type_id</a></td>
-            <td>int</td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="87a2b7248e9cc6b0e2711823c0caeee2.html">split</a></td>
-            <td>bool</td>
+            <td>bool </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="cd8946566a0629e980e9e9be9df681d1.html">bonus</a></td>
-            <td>bool</td>
+            <td>bool </td>
             <td><p>Создание заявки на основе продукта.</p>
 
 <pre><code>    Args:
@@ -350,6 +351,15 @@ bonus (bool, optional): Флаг использования бонусов дл�
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -360,7 +370,7 @@ bonus (bool, optional): Флаг использования бонусов дл�
             <a href='37ca0634ed3603ae7f11cc6cc265697f.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
             
             <span>, </span>
-            <a href='c4bc7028e66756d777e644f856bb11ef.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_prod</a>
+            <a href='c4bc7028e66756d777e644f856bb11ef.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>prod_id</a>
             
             <span>, </span>
             <a href='8382526be7c57345683b76e601eb3219.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>delivery_type_id</a>
@@ -465,6 +475,10 @@ bonus (bool, optional): Флаг использования бонусов дл�
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

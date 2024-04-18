@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -69,8 +70,8 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_shipments (int): Идентификатор поставки, к которой будут привязаны заявки.
-ids_requests (list): Список идентификаторов заявок, которые необходимо привязать к поставке.</code></pre>
+shipments_id (int): Идентификатор поставки, к которой будут привязаны заявки.
+requests_ids (list): Список идентификаторов заявок, которые необходимо привязать к поставке.</code></pre>
 
 <p>Returns:</p>
 
@@ -156,21 +157,21 @@ ids_requests (list): Список идентификаторов заявок, �
           <tr>
             <td>in</td>
             <td><a href="673ec1792cade4528b035b14d1925b48.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="ab7386f5aaabdd3fc3340158e1783285.html">id_shipments</a></td>
-            <td>int</td>
+            <td><a href="ab7386f5aaabdd3fc3340158e1783285.html">shipments_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="58a32f8d709861e22dfb9e60a27edeb6.html">ids_requests</a></td>
-            <td>list</td>
+            <td><a href="58a32f8d709861e22dfb9e60a27edeb6.html">requests_ids</a></td>
+            <td>list </td>
             <td><p>Привязывает список заявок к определенной поставке, если они еще не привязаны к другой поставке.</p>
 
 <pre><code>    Эта функция обновляет каждую заявку из предоставленного списка идентификаторов заявок,
@@ -325,6 +326,15 @@ ids_requests (list): Список идентификаторов заявок, �
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -332,10 +342,10 @@ ids_requests (list): Список идентификаторов заявок, �
             <a href='673ec1792cade4528b035b14d1925b48.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='ab7386f5aaabdd3fc3340158e1783285.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_shipments</a>
+            <a href='ab7386f5aaabdd3fc3340158e1783285.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>shipments_id</a>
             
             <span>, </span>
-            <a href='58a32f8d709861e22dfb9e60a27edeb6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>ids_requests</a>
+            <a href='58a32f8d709861e22dfb9e60a27edeb6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>requests_ids</a>
             
         </td>
     </tr>
@@ -431,6 +441,10 @@ ids_requests (list): Список идентификаторов заявок, �
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

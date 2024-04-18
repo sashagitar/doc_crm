@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -68,7 +69,7 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Активная сессия базы данных.
-id_prod (int): Идентификатор продукта.
+prod_id (int): Идентификатор продукта.
 section_name (str): Имя раздела, из которого нужно удалить продукт.</code></pre>
 
 <p>Returns:</p>
@@ -155,21 +156,21 @@ section_name (str): Имя раздела, из которого нужно уд
           <tr>
             <td>in</td>
             <td><a href="21558b37daab8b6b92cf7cb1cf62076e.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="18c82fa66a9f6d41d0a5f0204700cc57.html">id_prod</a></td>
-            <td>int</td>
+            <td><a href="18c82fa66a9f6d41d0a5f0204700cc57.html">prod_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="b740236b9b9c35010e14fcf1837dabf3.html">section_name</a></td>
-            <td>str</td>
+            <td>str </td>
             <td></td>
           </tr>
           
@@ -313,6 +314,15 @@ section_name (str): Имя раздела, из которого нужно уд
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -320,7 +330,7 @@ section_name (str): Имя раздела, из которого нужно уд
             <a href='21558b37daab8b6b92cf7cb1cf62076e.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='18c82fa66a9f6d41d0a5f0204700cc57.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_prod</a>
+            <a href='18c82fa66a9f6d41d0a5f0204700cc57.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>prod_id</a>
             
             <span>, </span>
             <a href='b740236b9b9c35010e14fcf1837dabf3.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>section_name</a>
@@ -419,6 +429,10 @@ section_name (str): Имя раздела, из которого нужно уд
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

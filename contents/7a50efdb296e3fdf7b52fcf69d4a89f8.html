@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -204,13 +205,13 @@ search (str, optional): Строка для поиска пользовател�
           
           <tr>
             <td>public</td>
-            <td><a href="6980195a7a839647940e93c68b050acf.html">add_link(session: Session, id_user: int, link: str)</a></td>
+            <td><a href="6980195a7a839647940e93c68b050acf.html">add_link(session: Session, user_id: int, link: str)</a></td>
             <td><p>Добавляет новую реферальную ссылку для пользователя.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_user (int): Идентификатор пользователя.
+user_id (int): Идентификатор пользователя.
 link (str): Реферальная ссылка.</code></pre>
 
 <p>Returns:</p>
@@ -220,13 +221,13 @@ link (str): Реферальная ссылка.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="9d01dfb289e55c0ff5e52c1a6843b0de.html">edit_link(session: Session, id_link: int, link: str)</a></td>
+            <td><a href="9d01dfb289e55c0ff5e52c1a6843b0de.html">edit_link(session: Session, link_id: int, link: str)</a></td>
             <td><p>Изменяет значение реферальной ссылки.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_link (int): Идентификатор реферальной ссылки.
+link_id (int): Идентификатор реферальной ссылки.
 link (str): Новое значение реферальной ссылки.</code></pre>
 
 <p>Returns:</p>
@@ -236,14 +237,14 @@ link (str): Новое значение реферальной ссылки.</co
           
           <tr>
             <td>public</td>
-            <td><a href="2b40871d60c32342f26fc534d8a3abe3.html">remove_link(session: Session, id_user: int, id_link: int)</a></td>
+            <td><a href="2b40871d60c32342f26fc534d8a3abe3.html">remove_link(session: Session, user_id: int, link_id: int)</a></td>
             <td><p>Удаляет реферальную ссылку для пользователя.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_user (int): Идентификатор пользователя.
-id_link (int): Идентификатор реферальной ссылки.</code></pre>
+user_id (int): Идентификатор пользователя.
+link_id (int): Идентификатор реферальной ссылки.</code></pre>
 
 <p>Returns:</p>
 
@@ -252,13 +253,13 @@ id_link (int): Идентификатор реферальной ссылки.</
           
           <tr>
             <td>public</td>
-            <td><a href="9ff339026b7293f12c607c88d7ba2b75.html">add_bonus(session: Session, id_user: int, count: int)</a></td>
+            <td><a href="9ff339026b7293f12c607c88d7ba2b75.html">add_bonus(session: Session, user_id: int, count: int)</a></td>
             <td><p>Добавляет бонусы пользователю. Привязывая к системной поставке - уведомлению</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_user (int): Идентификатор пользователя.
+user_id (int): Идентификатор пользователя.
 count (int): Количество бонусов для добавления.</code></pre>
 
 <p>Returns:</p>
@@ -268,13 +269,13 @@ count (int): Количество бонусов для добавления.</c
           
           <tr>
             <td>public</td>
-            <td><a href="69fecb2b419566ed2bb49e0ae675d173.html">subtract_bonus(session: Session, id_user: int, count: int)</a></td>
+            <td><a href="69fecb2b419566ed2bb49e0ae675d173.html">subtract_bonus(session: Session, user_id: int, count: int)</a></td>
             <td><p>Вычитает бонусы у пользователя. Привязывая к системной поставке - уведомлению</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_user (int): Идентификатор пользователя.
+user_id (int): Идентификатор пользователя.
 count (int): Количество бонусов для вычитания.</code></pre>
 
 <p>Returns:</p>
@@ -515,6 +516,10 @@ count (int): Количество бонусов для вычитания.</cod
 
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

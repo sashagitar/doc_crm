@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -66,7 +67,7 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_pay (int): Идентификатор платежа.
+pay_id (int): Идентификатор платежа.
 stat (str): Новый статус платежа.</code></pre>
 
 <p>Returns:</p>
@@ -153,21 +154,21 @@ stat (str): Новый статус платежа.</code></pre>
           <tr>
             <td>in</td>
             <td><a href="c2423cf5406c3ccfcab7566bc278632f.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="63aded1b9b7b6aaf1ed6141e06f05856.html">id_pay</a></td>
-            <td>int</td>
+            <td><a href="63aded1b9b7b6aaf1ed6141e06f05856.html">pay_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="46af480cdcce49e39ce3288cc91e7edb.html">stat</a></td>
-            <td>str</td>
+            <td>str </td>
             <td><p>Устанавливает статус для указанного платежа.</p>
 
 <pre><code>    Args:
@@ -319,6 +320,15 @@ stat (str): Новый статус платежа.</code></pre>
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -326,7 +336,7 @@ stat (str): Новый статус платежа.</code></pre>
             <a href='c2423cf5406c3ccfcab7566bc278632f.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='63aded1b9b7b6aaf1ed6141e06f05856.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_pay</a>
+            <a href='63aded1b9b7b6aaf1ed6141e06f05856.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>pay_id</a>
             
             <span>, </span>
             <a href='46af480cdcce49e39ce3288cc91e7edb.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>stat</a>
@@ -425,6 +435,10 @@ stat (str): Новый статус платежа.</code></pre>
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

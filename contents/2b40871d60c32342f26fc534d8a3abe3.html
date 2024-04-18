@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -66,8 +67,8 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_user (int): Идентификатор пользователя.
-id_link (int): Идентификатор реферальной ссылки.</code></pre>
+user_id (int): Идентификатор пользователя.
+link_id (int): Идентификатор реферальной ссылки.</code></pre>
 
 <p>Returns:</p>
 
@@ -153,21 +154,21 @@ id_link (int): Идентификатор реферальной ссылки.</
           <tr>
             <td>in</td>
             <td><a href="75784d5e1ff67e75eaedaad58965c087.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="ac465d85f227076160a9ef309dac0c98.html">id_user</a></td>
-            <td>int</td>
+            <td><a href="ac465d85f227076160a9ef309dac0c98.html">user_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="5dc18c9c87a6c9b26811c3f6d5dcfb69.html">id_link</a></td>
-            <td>int</td>
+            <td><a href="5dc18c9c87a6c9b26811c3f6d5dcfb69.html">link_id</a></td>
+            <td>int </td>
             <td><p>Удаляет реферальную ссылку для пользователя.</p>
 
 <pre><code>    Args:
@@ -319,6 +320,15 @@ id_link (int): Идентификатор реферальной ссылки.</
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -326,10 +336,10 @@ id_link (int): Идентификатор реферальной ссылки.</
             <a href='75784d5e1ff67e75eaedaad58965c087.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='ac465d85f227076160a9ef309dac0c98.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_user</a>
+            <a href='ac465d85f227076160a9ef309dac0c98.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>user_id</a>
             
             <span>, </span>
-            <a href='5dc18c9c87a6c9b26811c3f6d5dcfb69.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_link</a>
+            <a href='5dc18c9c87a6c9b26811c3f6d5dcfb69.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>link_id</a>
             
         </td>
     </tr>
@@ -425,6 +435,10 @@ id_link (int): Идентификатор реферальной ссылки.</
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

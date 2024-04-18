@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -66,7 +67,7 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_link (int): Идентификатор реферальной ссылки.
+link_id (int): Идентификатор реферальной ссылки.
 link (str): Новое значение реферальной ссылки.</code></pre>
 
 <p>Returns:</p>
@@ -153,21 +154,21 @@ link (str): Новое значение реферальной ссылки.</co
           <tr>
             <td>in</td>
             <td><a href="1c884f4095d0efb5b76cb755e93903ed.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="b982fe92ded34ad8d737e06f89d9ccef.html">id_link</a></td>
-            <td>int</td>
+            <td><a href="b982fe92ded34ad8d737e06f89d9ccef.html">link_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="3c247f43e1637b0bc7155f7b35d34f05.html">link</a></td>
-            <td>str</td>
+            <td>str </td>
             <td><p>Изменяет значение реферальной ссылки.</p>
 
 <pre><code>    Args:
@@ -319,6 +320,15 @@ link (str): Новое значение реферальной ссылки.</co
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -326,7 +336,7 @@ link (str): Новое значение реферальной ссылки.</co
             <a href='1c884f4095d0efb5b76cb755e93903ed.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='b982fe92ded34ad8d737e06f89d9ccef.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_link</a>
+            <a href='b982fe92ded34ad8d737e06f89d9ccef.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>link_id</a>
             
             <span>, </span>
             <a href='3c247f43e1637b0bc7155f7b35d34f05.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>link</a>
@@ -425,6 +435,10 @@ link (str): Новое значение реферальной ссылки.</co
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

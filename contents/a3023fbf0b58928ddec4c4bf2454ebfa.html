@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -66,7 +67,7 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_request (int): Идентификатор заявки.
+request_id (int): Идентификатор заявки.
 mode (bool): Режим обновления статуса. True для &quot;Отправлен СДЭК&quot;, False для &quot;Доставлен&quot;.</code></pre>
 
 <p>Returns:</p>
@@ -153,21 +154,21 @@ mode (bool): Режим обновления статуса. True для &quot;�
           <tr>
             <td>in</td>
             <td><a href="64c07adc9799156f867ff6fe87751884.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="abd2820568a4e2567a282856892fb71e.html">id_request</a></td>
-            <td>int</td>
+            <td><a href="abd2820568a4e2567a282856892fb71e.html">request_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="023f0065f9819b1668032aa66554387a.html">mode</a></td>
-            <td>bool</td>
+            <td>bool </td>
             <td><p>Обновляет статус заявки в зависимости от указанного режима. 
         Если mode=True, статус изменяется на &quot;Отправлен СДЭК&quot;, 
         а если mode=False – на &quot;Доставлен&quot;.</p>
@@ -321,6 +322,15 @@ mode (bool): Режим обновления статуса. True для &quot;�
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -328,7 +338,7 @@ mode (bool): Режим обновления статуса. True для &quot;�
             <a href='64c07adc9799156f867ff6fe87751884.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='abd2820568a4e2567a282856892fb71e.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_request</a>
+            <a href='abd2820568a4e2567a282856892fb71e.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>request_id</a>
             
             <span>, </span>
             <a href='023f0065f9819b1668032aa66554387a.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>mode</a>
@@ -427,6 +437,10 @@ mode (bool): Режим обновления статуса. True для &quot;�
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -223,13 +224,13 @@ filters (dict): Словарь с фильтрами для запроса то�
           
           <tr>
             <td>public</td>
-            <td><a href="bb071d9768733e5e8093d431056bf095.html">tab(session: Session, id_prod: int, title: str, description: str)</a></td>
+            <td><a href="bb071d9768733e5e8093d431056bf095.html">tab(session: Session, prod_id: int, title: str, description: str)</a></td>
             <td><p>Создает новый таб (вкладку с информацией) для продукта.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта.
+prod_id (int): Идентификатор продукта.
 title (str): Название таба.
 description (str): Описание таба.</code></pre>
 
@@ -240,13 +241,13 @@ description (str): Описание таба.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="9fe1d6c6ed9a28284b1c2d495e07e1c1.html">tab_edit(session: Session, id_tab: int, title: str, description: str)</a></td>
+            <td><a href="9fe1d6c6ed9a28284b1c2d495e07e1c1.html">tab_edit(session: Session, tab_id: int, title: str, description: str)</a></td>
             <td><p>Редактирует информацию таба.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_tab (int): Идентификатор таба.
+tab_id (int): Идентификатор таба.
 title (str): Новое название таба.
 description (str): Новое описание таба.</code></pre>
 
@@ -257,13 +258,13 @@ description (str): Новое описание таба.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="798afc25876c3b2ff2d6d120af526bde.html">tab_delete(session: Session, id_tab: int)</a></td>
+            <td><a href="798afc25876c3b2ff2d6d120af526bde.html">tab_delete(session: Session, tab_id: int)</a></td>
             <td><p>Удаляет таб.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_tab (int): Идентификатор таба.</code></pre>
+tab_id (int): Идентификатор таба.</code></pre>
 
 <p>Returns:</p>
 
@@ -272,13 +273,13 @@ id_tab (int): Идентификатор таба.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="f2160db9abac87d80beb604f4fbb1a09.html">size(session: Session, id_prod: int, num: str, cost: float)</a></td>
+            <td><a href="f2160db9abac87d80beb604f4fbb1a09.html">size(session: Session, prod_id: int, num: str, cost: float)</a></td>
             <td><p>Создает новый размер для продукта.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта.
+prod_id (int): Идентификатор продукта.
 num (str): Номер размера.
 cost (float): Стоимость размера.</code></pre>
 
@@ -289,13 +290,13 @@ cost (float): Стоимость размера.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="c1ceb98a09193144880430a35312edc9.html">size_edit(session: Session, id_size: int, num: str, cost: float)</a></td>
+            <td><a href="c1ceb98a09193144880430a35312edc9.html">size_edit(session: Session, size_id: int, num: str, cost: float)</a></td>
             <td><p>Изменяет информацию о размере продукта.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_size (int): Идентификатор размера.
+size_id (int): Идентификатор размера.
 num (str): Новый номер размера.
 cost (float): Новая стоимость размера.</code></pre>
 
@@ -306,13 +307,13 @@ cost (float): Новая стоимость размера.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="1cde1f985a5b8216ac912defcb790b11.html">size_delete(session: Session, id_size: int)</a></td>
+            <td><a href="1cde1f985a5b8216ac912defcb790b11.html">size_delete(session: Session, size_id: int)</a></td>
             <td><p>Удаляет размер продукта.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_size (int): Идентификатор размера.</code></pre>
+size_id (int): Идентификатор размера.</code></pre>
 
 <p>Returns:</p>
 
@@ -321,13 +322,13 @@ id_size (int): Идентификатор размера.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="8b7d85a4542df7de18774a5e4dbfe62c.html">info(session: Session, id_prod: int)</a></td>
+            <td><a href="8b7d85a4542df7de18774a5e4dbfe62c.html">info(session: Session, prod_id: int)</a></td>
             <td><p>Получает полную информацию о продукте, включая табы и размеры, по его идентификатору.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта.</code></pre>
+prod_id (int): Идентификатор продукта.</code></pre>
 
 <p>Returns:</p>
 
@@ -336,13 +337,13 @@ id_prod (int): Идентификатор продукта.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="d6f85dd53e408b6c2a35348fb09e9f77.html">duplicate(session: Session, id_prod: int)</a></td>
+            <td><a href="d6f85dd53e408b6c2a35348fb09e9f77.html">duplicate(session: Session, prod_id: int)</a></td>
             <td><p>Создает дубликат продукта по его идентификатору.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта для дублирования.</code></pre>
+prod_id (int): Идентификатор продукта для дублирования.</code></pre>
 
 <p>Returns:</p>
 
@@ -351,13 +352,13 @@ id_prod (int): Идентификатор продукта для дублиро
           
           <tr>
             <td>public</td>
-            <td><a href="a7cc4edd1284c71cd7b1c37c0b067999.html">view(session: Session, id_prod: int)</a></td>
+            <td><a href="a7cc4edd1284c71cd7b1c37c0b067999.html">view(session: Session, prod_id: int)</a></td>
             <td><p>Переключает видимость продукта, делая его скрытым или видимым.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта.</code></pre>
+prod_id (int): Идентификатор продукта.</code></pre>
 
 <p>Returns:</p>
 
@@ -381,14 +382,14 @@ name (str): Название нового раздела.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="cf69713db1538b5a7c7405f4b1c3e65a.html">section_add(session: Session, id_prod: int, id_section: int)</a></td>
+            <td><a href="cf69713db1538b5a7c7405f4b1c3e65a.html">section_add(session: Session, prod_id: int, section_id: int)</a></td>
             <td><p>Добавляет товар в раздел.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта.
-id_section (int): Идентификатор раздела.</code></pre>
+prod_id (int): Идентификатор продукта.
+section_id (int): Идентификатор раздела.</code></pre>
 
 <p>Returns:</p>
 
@@ -397,13 +398,13 @@ id_section (int): Идентификатор раздела.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="084a6eb3bf1674ccfc696750b07b5b95.html">section_add_name(session: Session, id_prod: int, section_name: str)</a></td>
+            <td><a href="084a6eb3bf1674ccfc696750b07b5b95.html">section_add_name(session: Session, prod_id: int, section_name: str)</a></td>
             <td><p>Добавляет товар в раздел по названию раздела.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта.
+prod_id (int): Идентификатор продукта.
 section_name (str): Имя раздела.</code></pre>
 
 <p>Returns:</p>
@@ -413,7 +414,7 @@ section_name (str): Имя раздела.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="7d0d2f024787a6a0d6ef6de95198b4df.html">section_move(session: Session, id_prod: int, id_section: int)</a></td>
+            <td><a href="7d0d2f024787a6a0d6ef6de95198b4df.html">section_move(session: Session, prod_id: int, section_id: int)</a></td>
             <td><p>Перемещает товар в другой раздел на основе идентификатора раздела.</p>
 
 <p>Этот метод удаляет существующие связи продукта с разделами и создает новую связь между продуктом и указанным разделом.</p>
@@ -421,8 +422,8 @@ section_name (str): Имя раздела.</code></pre>
 <p>Args:</p>
 
 <pre><code>session (Session): Активная сессия базы данных.
-id_prod (int): Идентификатор продукта.
-id_section (int): Идентификатор целевого раздела для перемещения продукта.</code></pre>
+prod_id (int): Идентификатор продукта.
+section_id (int): Идентификатор целевого раздела для перемещения продукта.</code></pre>
 
 <p>Returns:</p>
 
@@ -431,7 +432,7 @@ id_section (int): Идентификатор целевого раздела д�
           
           <tr>
             <td>public</td>
-            <td><a href="d174f72c1a2b926029c62a1fd76eed64.html">section_move_name(session: Session, id_prod: int, section_name: str)</a></td>
+            <td><a href="d174f72c1a2b926029c62a1fd76eed64.html">section_move_name(session: Session, prod_id: int, section_name: str)</a></td>
             <td><p>Перемещает товар в другой раздел по названию раздела.</p>
 
 <p>Этот метод удаляет существующие связи продукта с разделами и создает новую связь между продуктом и указанным разделом.</p>
@@ -439,7 +440,7 @@ id_section (int): Идентификатор целевого раздела д�
 <p>Args:</p>
 
 <pre><code>session (Session): Активная сессия базы данных.
-id_prod (int): Идентификатор продукта.
+prod_id (int): Идентификатор продукта.
 section_name (str): Имя целевого раздела для перемещения продукта.</code></pre>
 
 <p>Returns:</p>
@@ -449,7 +450,7 @@ section_name (str): Имя целевого раздела для перемещ
           
           <tr>
             <td>public</td>
-            <td><a href="4f2790691549287370c638e81c1e0d30.html">section_remove(session: Session, id_prod: int, id_section: int)</a></td>
+            <td><a href="4f2790691549287370c638e81c1e0d30.html">section_remove(session: Session, prod_id: int, section_id: int)</a></td>
             <td><p>Удаляет продукт из раздела, используя идентификаторы продукта и раздела.</p>
 
 <p>Если связь между продуктом и разделом существует, она будет удалена. Если такая связь не найдена, будет возвращено сообщение об ошибке.</p>
@@ -457,8 +458,8 @@ section_name (str): Имя целевого раздела для перемещ
 <p>Args:</p>
 
 <pre><code>session (Session): Активная сессия базы данных.
-id_prod (int): Идентификатор продукта.
-id_section (int): Идентификатор раздела, из которого нужно удалить продукт.</code></pre>
+prod_id (int): Идентификатор продукта.
+section_id (int): Идентификатор раздела, из которого нужно удалить продукт.</code></pre>
 
 <p>Returns:</p>
 
@@ -467,7 +468,7 @@ id_section (int): Идентификатор раздела, из которог
           
           <tr>
             <td>public</td>
-            <td><a href="c165798420d769782c74970e8748e524.html">section_remove_name(session: Session, id_prod: int, section_name: str)</a></td>
+            <td><a href="c165798420d769782c74970e8748e524.html">section_remove_name(session: Session, prod_id: int, section_name: str)</a></td>
             <td><p>Удаляет товар из раздела по названию раздела.</p>
 
 <p>Если связь между продуктом и разделом существует, она будет удалена. Если такая связь не найдена, будет возвращено сообщение об ошибке.</p>
@@ -475,7 +476,7 @@ id_section (int): Идентификатор раздела, из которог
 <p>Args:</p>
 
 <pre><code>session (Session): Активная сессия базы данных.
-id_prod (int): Идентификатор продукта.
+prod_id (int): Идентификатор продукта.
 section_name (str): Имя раздела, из которого нужно удалить продукт.</code></pre>
 
 <p>Returns:</p>
@@ -716,6 +717,10 @@ section_name (str): Имя раздела, из которого нужно уд
 
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

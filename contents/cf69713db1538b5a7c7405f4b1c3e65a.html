@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -66,8 +67,8 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_prod (int): Идентификатор продукта.
-id_section (int): Идентификатор раздела.</code></pre>
+prod_id (int): Идентификатор продукта.
+section_id (int): Идентификатор раздела.</code></pre>
 
 <p>Returns:</p>
 
@@ -153,21 +154,21 @@ id_section (int): Идентификатор раздела.</code></pre>
           <tr>
             <td>in</td>
             <td><a href="890714d6e64a009f2568a8906fdf3ed7.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="3e5d2144d6c13c3082bfb24328b14f8f.html">id_prod</a></td>
-            <td>int</td>
+            <td><a href="3e5d2144d6c13c3082bfb24328b14f8f.html">prod_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="ddc9f9d8b29f2a676c06937a442fdcad.html">id_section</a></td>
-            <td>int</td>
+            <td><a href="ddc9f9d8b29f2a676c06937a442fdcad.html">section_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
@@ -311,6 +312,15 @@ id_section (int): Идентификатор раздела.</code></pre>
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -318,10 +328,10 @@ id_section (int): Идентификатор раздела.</code></pre>
             <a href='890714d6e64a009f2568a8906fdf3ed7.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='3e5d2144d6c13c3082bfb24328b14f8f.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_prod</a>
+            <a href='3e5d2144d6c13c3082bfb24328b14f8f.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>prod_id</a>
             
             <span>, </span>
-            <a href='ddc9f9d8b29f2a676c06937a442fdcad.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_section</a>
+            <a href='ddc9f9d8b29f2a676c06937a442fdcad.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>section_id</a>
             
         </td>
     </tr>
@@ -417,6 +427,10 @@ id_section (int): Идентификатор раздела.</code></pre>
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

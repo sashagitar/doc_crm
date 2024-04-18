@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -66,7 +67,7 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_user (int): Идентификатор пользователя.
+user_id (int): Идентификатор пользователя.
 count (int): Количество бонусов для добавления.</code></pre>
 
 <p>Returns:</p>
@@ -153,21 +154,21 @@ count (int): Количество бонусов для добавления.</c
           <tr>
             <td>in</td>
             <td><a href="9519d5f435495126b9c1d735f00df162.html">session</a></td>
-            <td>Session</td>
+            <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="440ce3b76c24597d33ef12b566888d64.html">id_user</a></td>
-            <td>int</td>
+            <td><a href="440ce3b76c24597d33ef12b566888d64.html">user_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
             <td><a href="ac94e943dc41eaf7f075505040ac9be5.html">count</a></td>
-            <td>int</td>
+            <td>int </td>
             <td><p>Добавляет бонусы пользователю. Привязывая к системной поставке - уведомлению</p>
 
 <pre><code>    Args:
@@ -319,6 +320,15 @@ count (int): Количество бонусов для добавления.</c
     
     
     <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>parameters</td>
         <td>
             
@@ -326,7 +336,7 @@ count (int): Количество бонусов для добавления.</c
             <a href='9519d5f435495126b9c1d735f00df162.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='440ce3b76c24597d33ef12b566888d64.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>id_user</a>
+            <a href='440ce3b76c24597d33ef12b566888d64.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>user_id</a>
             
             <span>, </span>
             <a href='ac94e943dc41eaf7f075505040ac9be5.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>count</a>
@@ -425,6 +435,10 @@ count (int): Количество бонусов для добавления.</c
       
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

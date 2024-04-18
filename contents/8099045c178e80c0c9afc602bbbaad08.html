@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -172,13 +173,13 @@ filters (dict): Словарь с фильтрами для запроса. Кл
           
           <tr>
             <td>public</td>
-            <td><a href="f66ec31c4154542c6a8e9fc19a9ec782.html">check(session: Session, id_pay: int)</a></td>
+            <td><a href="f66ec31c4154542c6a8e9fc19a9ec782.html">check(session: Session, pay_id: int)</a></td>
             <td><p>Получает статус и время ожидания для указанного платежа.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_pay (int): Идентификатор платежа.</code></pre>
+pay_id (int): Идентификатор платежа.</code></pre>
 
 <p>Returns:</p>
 
@@ -216,13 +217,13 @@ ids_pay (list): Список идентификаторов платежей.</c
           
           <tr>
             <td>public</td>
-            <td><a href="911444e8c07d6cd644297740aa4a2bff.html">set_stat(session: Session, id_pay: int, stat: str)</a></td>
+            <td><a href="911444e8c07d6cd644297740aa4a2bff.html">set_stat(session: Session, pay_id: int, stat: str)</a></td>
             <td><p>Устанавливает статус для указанного платежа.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_pay (int): Идентификатор платежа.
+pay_id (int): Идентификатор платежа.
 stat (str): Новый статус платежа.</code></pre>
 
 <p>Returns:</p>
@@ -463,6 +464,10 @@ stat (str): Новый статус платежа.</code></pre>
 
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>

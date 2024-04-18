@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
 
   </head>
   <body>
@@ -205,13 +206,13 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
           
           <tr>
             <td>public</td>
-            <td><a href="063b6f3628da6de2afcfbd5b4fb67f04.html">check(session: Session, id_pay: int)</a></td>
+            <td><a href="063b6f3628da6de2afcfbd5b4fb67f04.html">check(session: Session, pay_id: int)</a></td>
             <td><p>Получает статус и время ожидания для указанного платежа.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-id_pay (int): Идентификатор платежа.</code></pre>
+pay_id (int): Идентификатор платежа.</code></pre>
 
 <p>Returns:</p>
 
@@ -452,6 +453,10 @@ id_pay (int): Идентификатор платежа.</code></pre>
 
 
 
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
     </div>
   </body>
 </html>
