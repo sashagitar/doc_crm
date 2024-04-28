@@ -173,26 +173,6 @@ tgid (int): Telegram ID пользователя.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="36ce70aa92978361128db75fa634776a.html">set_user(session: Session, tgid: int, username: str = None, phone: str = None, city: str = None, address: str = None, pvz: int = 0)</a></td>
-            <td><p>Обновление информации о пользователе, включая его полное имя, телефон, адрес и пункт выдачи.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Telegram ID пользователя.
-username (str): Полное имя пользователя.
-phone (str): Номер телефона пользователя.
-address (str): Адрес пользователя.
-pvz (int, optional): Идентификатор пункта выдачи. Если не указан, значение не обновляется.</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>Dict[str, Union[bool, str]]: Словарь с результатом операции. В случае успеха содержит сообщение о успешном обновлении.
-                            В случае ошибки возвращает сообщение об ошибке.</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
             <td><a href="6579661d3af998ff222e77ec6d8c1945.html">create_user(session: Session, tgid: int, login: str, username: str, phone: str, address: str, city: str)</a></td>
             <td><p>Создание нового пользователя с заданными параметрами. Включает в себя создание реферальной ссылки для нового пользователя.</p>
 
@@ -224,6 +204,12 @@ city (str, optional): Название города для фильтрации 
 <p>Returns:</p>
 
 <pre><code>List[Dict[str, Union[int, str]]]: Список пунктов выдачи в формате JSON, каждый из которых содержит идентификатор и адрес.</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="42f1fe5ede0234073950af877d5e913c.html">set_user(session: Session, tgid: int, login: str = None, full_name: str = None, phone: str = None, city: str = None, address: str = None, pvz: int = 0)</a></td>
+            <td></td>
           </tr>
           
         </table>
