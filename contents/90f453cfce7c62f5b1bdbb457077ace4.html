@@ -209,7 +209,21 @@ city (str, optional): Название города для фильтрации 
           <tr>
             <td>public</td>
             <td><a href="42f1fe5ede0234073950af877d5e913c.html">set_user(session: Session, tgid: int, login: str = None, full_name: str = None, phone: str = None, city: str = None, address: str = None, pvz: int = 0)</a></td>
-            <td></td>
+            <td><p>Обновление информации о пользователе, включая его полное имя, телефон, адрес и пункт выдачи.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Telegram ID пользователя.
+username (str): Полное имя пользователя.
+phone (str): Номер телефона пользователя.
+address (str): Адрес пользователя.
+pvz (int, optional): Идентификатор пункта выдачи. Если не указан, значение не обновляется.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>Dict[str, Union[bool, str]]: Словарь с результатом операции. В случае успеха содержит сообщение о успешном обновлении.
+                            В случае ошибки возвращает сообщение об ошибке.</code></pre></td>
           </tr>
           
         </table>
