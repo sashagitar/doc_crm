@@ -29,8 +29,6 @@
           UMLOperation
         </span>
         
-          <span style="margin-left: 10px" class="alert alert-info">«»</span>
-        
       </section>
 
       <!-- Path -->
@@ -75,7 +73,13 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
 
 <p>Returns:</p>
 
-<pre><code>Dict[str, Union[bool, str, int]]: Результат создания оплаты, включая успех операции, сообщение и идентификатор оплаты.</code></pre>
+<pre><code>&#39;success&#39;: Bool
+&#39;message&#39;: Str
+&#39;payment&#39;:  Int</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre>
           
         </div>
       </section>
@@ -163,22 +167,22 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
           
           <tr>
             <td>in</td>
-            <td><a href="8e0961aebae92404b75d4d1157e04934.html">request_id</a></td>
+            <td><a href="8e0961aebae92404b75d4d1157e04934.html">tgid</a></td>
             <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="8e63081ca181109036d858c202af5e8b.html">requisite_id</a></td>
+            <td><a href="8e63081ca181109036d858c202af5e8b.html">request_id</a></td>
             <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="41a35bf19e50a582008bb58cc6e93c44.html">step</a></td>
-            <td>float </td>
+            <td><a href="41a35bf19e50a582008bb58cc6e93c44.html">requisite_id</a></td>
+            <td>int </td>
             <td><p>Создание оплаты на основе заявки и реквизита.</p>
 
 <pre><code>    Args:
@@ -189,6 +193,13 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
 
     Returns:
         JSON: Результат операции в формате JSON.</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="6755f5f658822386afb94a54d8d73890.html">step</a></td>
+            <td>float </td>
+            <td></td>
           </tr>
           
         </table>
@@ -294,7 +305,7 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
     
     <tr>
         <td>stereotype</td>
-        <td></td>
+        <td><span class='label label-info'>null</span></td>
     </tr>
     
     
@@ -347,13 +358,16 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
             <a href='ac6cfade77fdce2acd5a73084fceceab.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='8e0961aebae92404b75d4d1157e04934.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>request_id</a>
+            <a href='8e0961aebae92404b75d4d1157e04934.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
             
             <span>, </span>
-            <a href='8e63081ca181109036d858c202af5e8b.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>requisite_id</a>
+            <a href='8e63081ca181109036d858c202af5e8b.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>request_id</a>
             
             <span>, </span>
-            <a href='41a35bf19e50a582008bb58cc6e93c44.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>step</a>
+            <a href='41a35bf19e50a582008bb58cc6e93c44.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>requisite_id</a>
+            
+            <span>, </span>
+            <a href='6755f5f658822386afb94a54d8d73890.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>step</a>
             
         </td>
     </tr>

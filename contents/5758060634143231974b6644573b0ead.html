@@ -66,15 +66,20 @@
           
             <p>Удаление расчетного товара по его идентификатору для конкретного пользователя.</p>
 
-<p>Параметры:</p>
+<p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор пользователя Telegram.
 product_id (int): Идентификатор расчетного товара, который нужно удалить.</code></pre>
 
-<p>Возвращает:</p>
+<p>Returns:</p>
 
-<pre><code>Dict[str, Union[bool, str]]: Результат операции удаления в формате JSON, содержащий статус операции и сообщение.</code></pre>
+<pre><code>&#39;success&#39;: Bool
+&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre>
           
         </div>
       </section>

@@ -66,7 +66,7 @@
           
             <p>Создание товара и добавление его в расчетные для пользователя.</p>
 
-<p>Параметры:</p>
+<p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор Telegram пользователя.
@@ -75,9 +75,11 @@ size (str): Размер товара.
 cost (float): Стоимость товара.
 category_id (int): Идентификатор категории товара.</code></pre>
 
-<p>Возвращает:</p>
+<p>Returns:</p>
 
-<pre><code>Dict[str, Union[bool, str, int]]: Результат операции в формате JSON, содержащий статус операции,</code></pre>
+<pre><code>&#39;success&#39;:  Bool
+&#39;message&#39;: Str
+&#39;product_id&#39;: Int</code></pre>
           
         </div>
       </section>

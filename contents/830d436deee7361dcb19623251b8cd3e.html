@@ -66,14 +66,34 @@
           
             <p>Получение списка активных заявок пользователя.</p>
 
-<p>Параметры:</p>
+<p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 tgid (int): Идентификатор Telegram пользователя.</code></pre>
 
-<p>Возвращает:</p>
+<p>Returns:</p>
 
-<pre><code>List[Dict[str, Union[int, str, float]]]: Список активных заявок пользователя в формате JSON, включая идентификатор заявки, ссылку, бренд, модель, SKU, размер, дату создания, актуальную и окончательную стоимость, статус доставки, название категории, и другую информацию.</code></pre>
+<pre><code>list[{
+    &#39;request_id&#39;: Int
+    &#39;link&#39;: Str
+    &#39;brand&#39;: Str
+    &#39;model&#39;: Str
+    &#39;sku&#39;: Str
+    &#39;size&#39;: Str
+    &#39;creation_date&#39;: &#39;%Y-%m-%d %H:%M:%S&#39;
+    &#39;actual_price&#39;: Float
+    &#39;final_cost&#39;: Float
+    &#39;delivery_status&#39;:  Int
+    &#39;category_name&#39;: Str
+    &#39;is_split&#39;: Bool
+    &#39;shipment_id&#39;: Int
+    &#39;tracking_number&#39;: Str
+    &#39;delivery_address&#39;: Str
+    &#39;delivery_type&#39;: Int
+    &#39;images&#39;: List[Str]</code></pre>
+
+<p>}]
+    </p>
           
         </div>
       </section>

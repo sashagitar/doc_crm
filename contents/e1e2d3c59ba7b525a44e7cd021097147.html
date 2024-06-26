@@ -165,8 +165,11 @@
 
 <p>Returns:</p>
 
-<pre><code>List[Dict[str, Union[int, str, bool]]]: Список словарей, где каждый словарь содержит
-                                        информацию о банке: его идентификатор, название и видимость.</code></pre></td>
+<pre><code>List[{
+    &#39;id&#39;: Int
+    &#39;name&#39;: Str
+    &#39;is_visible&#39;: Bool
+}]</code></pre></td>
           </tr>
           
           <tr>
@@ -183,13 +186,18 @@ step (float): Шаг, который должен уместиться в ост
 
 <p>Returns:</p>
 
-<pre><code>Dict[str, Union[int, str, float]]: Реквизит с максимальным received или сообщение об ошибке.
-                                Включает идентификатор реквизита, номер карты и время ожидания.</code></pre></td>
+<pre><code>&#39;id&#39;: Int
+&#39;card_number&#39;: Str
+&#39;wait_time&#39;: Int</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
-            <td><a href="39afaf9c143459ed3b0a7fe19579bbfd.html">create_payment(session: Session, request_id: int, requisite_id: int, step: float = 0)</a></td>
+            <td><a href="39afaf9c143459ed3b0a7fe19579bbfd.html">create_payment(session: Session, tgid: int, request_id: int, requisite_id: int, step: float = 0)</a></td>
             <td><p>Создание оплаты на основе заявки и реквизита, с возможностью указания шага оплаты.</p>
 
 <p>Args:</p>
@@ -201,7 +209,13 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
 
 <p>Returns:</p>
 
-<pre><code>Dict[str, Union[bool, str, int]]: Результат создания оплаты, включая успех операции, сообщение и идентификатор оплаты.</code></pre></td>
+<pre><code>&#39;success&#39;: Bool
+&#39;message&#39;: Str
+&#39;payment&#39;:  Int</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -216,8 +230,8 @@ pay_id (int): Идентификатор платежа.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>Dict[str, Union[str, int, None]]: Статус платежа и время ожидания, если платеж найден.
-                                В противном случае возвращает сообщение об ошибке.</code></pre></td>
+<pre><code> &#39;status&#39;:  Int
+&#39;wait_time&#39;: Int</code></pre></td>
           </tr>
           
         </table>
