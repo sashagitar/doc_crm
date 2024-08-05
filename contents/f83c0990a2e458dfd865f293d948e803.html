@@ -70,9 +70,14 @@
 deliv_id (int): Идентификатор поставки.
 status_id (int): Новый статус доставки.</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>jsonify: Объект JSON, содержащий список идентификаторов заявок, которые не соответствуют условиям смены статуса.</code></pre>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str
+&#39;non_compliant_requests_id&#39;: list[Int]</code></pre>
           
         </div>
       </section>

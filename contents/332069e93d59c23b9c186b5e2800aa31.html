@@ -165,7 +165,11 @@
 
 <p>Returns:</p>
 
-<pre><code>Response: Список всех банков в формате JSON.</code></pre></td>
+<pre><code>List[{
+    &#39;id&#39;: Int
+    &#39;is_visible&#39;: Bool,
+    &#39;name&#39;: Str
+}]</code></pre></td>
           </tr>
           
           <tr>
@@ -178,9 +182,13 @@
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
 bank_name (str): Название нового банка.</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>Response: Сообщение о добавлении нового банка в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -195,9 +203,9 @@ bank_id (int): Идентификатор банка.
 mode (bool): Режим изменения. Если True, изменяется название, если False - статус видимости.
 new_value (str, optional): Новое значение для обновления. По умолчанию None.</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>Response: Сообщение об обновлении банка в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -212,7 +220,11 @@ bank_id (int): Идентификатор банка.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>Response: Сообщение об удалении банка или об ошибке в формате JSON.</code></pre></td>
+<pre><code>Response: Сообщение об удалении банка или об ошибке в формате JSON.</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -227,7 +239,16 @@ step (float): Шаг оплаты.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>list: Список реквизитов, сумма по которым превышает лимит.</code></pre></td>
+<pre><code>list[{
+    &#39;id&#39;: int
+    &#39;card_number&#39;: str
+    &#39;bank_id&#39;: int
+    &#39;name&#39;: str
+    &#39;wait_time&#39;: int
+    &#39;received&#39;: bool
+    &#39;received_limit&#39;: float
+    &#39;is_visible&#39;: bool
+}]</code></pre></td>
           </tr>
           
           <tr>
@@ -242,7 +263,16 @@ bank_id (int): Идентификатор банка.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>Response: Список реквизитов банка в формате JSON.</code></pre></td>
+<pre><code>list[{
+    &#39;id&#39;: int
+    &#39;card_number&#39;: str
+    &#39;bank_id&#39;: int
+    &#39;name&#39;: str
+    &#39;wait_time&#39;: int
+    &#39;received&#39;: bool
+    &#39;received_limit&#39;: float
+    &#39;is_visible&#39;: bool
+}]</code></pre></td>
           </tr>
           
           <tr>
@@ -259,9 +289,9 @@ name (str): Имя владельца реквизита.
 wait_time (int): Время ожидания для реквизита.
 limit (int): Лимит получения средств на реквизит.</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>Response: Сообщение о добавлении реквизита в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -276,9 +306,13 @@ req_id (int): Идентификатор реквизита, который ну
 new_value (str): Новое значение для обновления.
 mode (str): Поле, которое нужно обновить (&#39;card_number&#39;, &#39;name&#39;, &#39;wait_time&#39;, &#39;received_limit&#39;, &#39;is_visible&#39;).</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>Response: Сообщение об обновлении реквизита в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -293,9 +327,13 @@ req_id (int): Идентификатор реквизита, который ну
 new_value (str): Новое значение для обновления.
 mode (str): Поле, которое нужно обновить (&#39;card_number&#39;, &#39;name&#39;, &#39;wait_time&#39;, &#39;received_limit&#39;, &#39;is_visible&#39;).</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>Response: Сообщение об обновлении реквизита в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
         </table>

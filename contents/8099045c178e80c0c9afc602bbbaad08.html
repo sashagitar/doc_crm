@@ -164,7 +164,14 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-filters (dict): Словарь с фильтрами для запроса. Ключи могут быть &#39;ref_number&#39;, &#39;date_from&#39;, &#39;date_to&#39;, &#39;price_from&#39;, &#39;price_to&#39;.</code></pre>
+filters (dict): Словарь с фильтрами для запроса. 
+{
+    &#39;ref_number&#39;: Int
+    &#39;date_from&#39;: DateTime
+    &#39;date_to&#39;: DateTime
+    &#39;price_from&#39;: Int
+    &#39;price_to&#39;: Int
+}</code></pre>
 
 <p>Returns:</p>
 
@@ -183,7 +190,12 @@ pay_id (int): Идентификатор платежа.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Объект JSON, содержащий статус платежа и время ожидания.</code></pre></td>
+<pre><code>&#39;status&#39;: str,
+&#39;wait_time&#39;: int</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -198,7 +210,13 @@ ids_pay (list): Список идентификаторов платежей.</c
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Объект JSON, содержащий список со статусами платежей и временем ожидания.</code></pre></td>
+<p>   &#39;id&#39;: int,
+    &#39;status&#39;: str,
+    &#39;wait_time&#39;: int</p>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -226,9 +244,13 @@ ids_pay (list): Список идентификаторов платежей.</c
 pay_id (int): Идентификатор платежа.
 stat (str): Новый статус платежа.</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>jsonify: Объект JSON, сообщающий о результате операции.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
         </table>

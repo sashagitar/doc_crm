@@ -180,7 +180,7 @@ tgid (int): Telegram ID пользователя.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="058138ff2e7eb18c74f8b816dcff61ed.html">hello(session: Session, link: str)</a></td>
+            <td><a href="058138ff2e7eb18c74f8b816dcff61ed.html">hello(session: Session, link: str, tgid: int)</a></td>
             <td><p>Приветственный бонус за использование реферальной ссылки.</p>
 
 <p>Поиск в базе данных пользователя, связанного с предоставленной реферальной ссылкой.
@@ -190,7 +190,8 @@ tgid (int): Telegram ID пользователя.</code></pre>
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-link (str): Реферальная ссылка.</code></pre>
+link (str): Реферальная ссылка.
+tgid (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
@@ -218,7 +219,12 @@ tgid (int): Telegram ID пользователя.</code></pre>
 <p>Returns:</p>
 
 <pre><code>&#39;success&#39; : Bool
-&#39;total_bonus&#39;: int</code></pre></td>
+&#39;total_bonus&#39;: int</code></pre>
+
+<p>Если False</p>
+
+<pre><code>&#39;success&#39; : Bool
+ &#39;message&#39;: Str</code></pre></td>
           </tr>
           
           <tr>

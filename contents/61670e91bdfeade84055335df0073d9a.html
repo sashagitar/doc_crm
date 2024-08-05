@@ -71,9 +71,13 @@ req_id (int): Идентификатор реквизита, который ну
 new_value (str): Новое значение для обновления.
 mode (str): Поле, которое нужно обновить (&#39;card_number&#39;, &#39;name&#39;, &#39;wait_time&#39;, &#39;received_limit&#39;, &#39;is_visible&#39;).</code></pre>
 
-<p>Returns:</p>
+<p>Returns: </p>
 
-<pre><code>Response: Сообщение об обновлении реквизита в формате JSON.</code></pre>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre>
           
         </div>
       </section>

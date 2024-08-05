@@ -69,7 +69,14 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-filters (dict): Словарь с фильтрами для запроса. Ключи могут быть &#39;ref_number&#39;, &#39;date_from&#39;, &#39;date_to&#39;, &#39;price_from&#39;, &#39;price_to&#39;.</code></pre>
+filters (dict): Словарь с фильтрами для запроса. 
+{
+    &#39;ref_number&#39;: Int
+    &#39;date_from&#39;: DateTime
+    &#39;date_to&#39;: DateTime
+    &#39;price_from&#39;: Int
+    &#39;price_to&#39;: Int
+}</code></pre>
 
 <p>Returns:</p>
 

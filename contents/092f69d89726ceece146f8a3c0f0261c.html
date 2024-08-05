@@ -71,7 +71,16 @@ bank_id (int): Идентификатор банка.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>Response: Список реквизитов банка в формате JSON.</code></pre>
+<pre><code>list[{
+    &#39;id&#39;: int
+    &#39;card_number&#39;: str
+    &#39;bank_id&#39;: int
+    &#39;name&#39;: str
+    &#39;wait_time&#39;: int
+    &#39;received&#39;: bool
+    &#39;received_limit&#39;: float
+    &#39;is_visible&#39;: bool
+}]</code></pre>
           
         </div>
       </section>

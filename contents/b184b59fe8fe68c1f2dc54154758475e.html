@@ -175,7 +175,45 @@
 <p>Returns:</p>
 
 <pre><code>&#39;id&#39;: Int
-&#39;name&#39;: Str</code></pre></td>
+&#39;name&#39;: Str
+&#39;image_path&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="8240dee344dcce0fb072465e327ad270.html">get_sections(session: Session)</a></td>
+            <td><p>Получение списка разделов товаров из базы данных.</p>
+
+<pre><code>    Данный метод запрашивает у сессии базы данных все записи разделов и
+    возвращает их в виде списка словарей, содержащих идентификатор и имя раздела.</code></pre>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>List {
+    &#39;id&#39;: Int
+    &#39;name&#39;: Str
+}</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="07fe201e4a1d19d1bf4133d59c8b2a44.html">get_brands(session: Session)</a></td>
+            <td><p>Получение списка уникальных брендов из базы данных.</p>
+
+<p>Данный метод запрашивает у сессии базы данных уникальные записи брендов из таблицы товаров и
+возвращает их в виде списка словарей, содержащих название бренда.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>List[Str]</code></pre></td>
           </tr>
           
           <tr>
@@ -196,7 +234,11 @@ category_id (int): Идентификатор категории товара.</
 
 <pre><code>&#39;success&#39;:  Bool
 &#39;message&#39;: Str
-&#39;product_id&#39;: Int</code></pre></td>
+&#39;product_id&#39;: Int</code></pre>
+
+<p>Если False</p>
+
+<pre><code>&#39;error&#39; : Str</code></pre></td>
           </tr>
           
           <tr>

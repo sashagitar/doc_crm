@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>count_bonus</title>
+    <title>get_brands</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>count_bonus</h1>
+      <h1>get_brands</h1>
 
       <!-- Type and Stereotype -->
 
@@ -28,8 +28,6 @@
           <span class="node-icon staruml-icon icon-UMLOperation"></span>
           UMLOperation
         </span>
-        
-          <span style="margin-left: 10px" class="alert alert-info">«»</span>
         
       </section>
 
@@ -46,10 +44,10 @@
           <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='fb58e4c74e55a4b2a8f16aa6f58ffe32.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BonusMngr</a></span>
+          <span class="label label-info"><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='49e8063225390f0871ad13fe954fdf95.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>count_bonus</a></span>
+          <span class="label label-info"><a href='07fe201e4a1d19d1bf4133d59c8b2a44.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>get_brands</a></span>
         
       </section>
 
@@ -64,25 +62,18 @@
         <h3>Description</h3>
         <div>
           
-            <p>Подсчитывает общее количество бонусных баллов для заданного пользователя.</p>
+            <p>Получение списка уникальных брендов из базы данных.</p>
 
-<p>Вычисляет и возвращает общую сумму бонусных баллов, накопленных пользователем.
-В случае отсутствия бонусов возвращает ноль.</p>
+<p>Данный метод запрашивает у сессии базы данных уникальные записи брендов из таблицы товаров и
+возвращает их в виде списка словарей, содержащих название бренда.</p>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Telegram ID пользователя.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>&#39;success&#39; : Bool
-&#39;total_bonus&#39;: int</code></pre>
-
-<p>Если False</p>
-
-<pre><code>&#39;success&#39; : Bool
- &#39;message&#39;: Str</code></pre>
+<pre><code>List[Str]</code></pre>
           
         </div>
       </section>
@@ -163,16 +154,20 @@ tgid (int): Telegram ID пользователя.</code></pre>
           
           <tr>
             <td>in</td>
-            <td><a href="e263392bd5b407759cb83b74f5d2ac01.html">session</a></td>
+            <td><a href="a67d787ada7d21ea470505e57c226245.html">session</a></td>
             <td>Session </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="c363c2448de0ba46642bf0cd84606fec.html">tgid</a></td>
-            <td>int </td>
-            <td></td>
+            <td><p>Получение списка уникальных брендов из базы данных.</p>
+
+<pre><code>    Данный метод запрашивает у сессии базы данных уникальные записи брендов из таблицы товаров и
+    возвращает их в виде списка словарей, содержащих название бренда.</code></pre>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>List[Str]</code></pre></td>
           </tr>
           
         </table>
@@ -263,7 +258,7 @@ tgid (int): Telegram ID пользователя.</code></pre>
     
     <tr>
         <td>name</td>
-        <td>count_bonus</td>
+        <td>get_brands</td>
     </tr>
     
     
@@ -278,7 +273,7 @@ tgid (int): Telegram ID пользователя.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td></td>
+        <td><span class='label label-info'>null</span></td>
     </tr>
     
     
@@ -328,10 +323,7 @@ tgid (int): Telegram ID пользователя.</code></pre>
         <td>
             
             
-            <a href='e263392bd5b407759cb83b74f5d2ac01.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
-            
-            <span>, </span>
-            <a href='c363c2448de0ba46642bf0cd84606fec.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
+            <a href='a67d787ada7d21ea470505e57c226245.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
         </td>
     </tr>

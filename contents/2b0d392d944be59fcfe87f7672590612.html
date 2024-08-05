@@ -71,7 +71,13 @@ ids_pay (list): Список идентификаторов платежей.</c
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Объект JSON, содержащий список со статусами платежей и временем ожидания.</code></pre>
+<p>   &#39;id&#39;: int,
+    &#39;status&#39;: str,
+    &#39;wait_time&#39;: int</p>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre>
           
         </div>
       </section>

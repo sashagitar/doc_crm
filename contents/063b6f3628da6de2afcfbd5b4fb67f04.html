@@ -29,8 +29,6 @@
           UMLOperation
         </span>
         
-          <span style="margin-left: 10px" class="alert alert-info">«»</span>
-        
       </section>
 
       <!-- Path -->
@@ -69,7 +67,8 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-pay_id (int): Идентификатор платежа.</code></pre>
+pay_id (int): Идентификатор платежа.
+tgid (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
@@ -163,6 +162,13 @@ pay_id (int): Идентификатор платежа.</code></pre>
           <tr>
             <td>in</td>
             <td><a href="4f8738ec21a804a7f62af6d2c9c6478a.html">pay_id</a></td>
+            <td>int </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="e36f35a0c2a729092a8a0de2726b5513.html">tgid</a></td>
             <td>int </td>
             <td></td>
           </tr>
@@ -270,7 +276,7 @@ pay_id (int): Идентификатор платежа.</code></pre>
     
     <tr>
         <td>stereotype</td>
-        <td></td>
+        <td><span class='label label-info'>null</span></td>
     </tr>
     
     
@@ -324,6 +330,9 @@ pay_id (int): Идентификатор платежа.</code></pre>
             
             <span>, </span>
             <a href='4f8738ec21a804a7f62af6d2c9c6478a.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>pay_id</a>
+            
+            <span>, </span>
+            <a href='e36f35a0c2a729092a8a0de2726b5513.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
             
         </td>
     </tr>
