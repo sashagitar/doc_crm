@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BankManager</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>BankManager</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-UMLClass"></span>
+          UMLClass
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>CRM</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='332069e93d59c23b9c186b5e2800aa31.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BankManager</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Функционал банков и реквизитов оплаты</p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+        
+        
+<section class="element-list">
+    <h3>Generalized Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='6fc305e5d9951c44b20dc9c3482184cb.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BaseMngr</a></li>
+        
+    </ul>
+</section>
+
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+      <section>
+        <h3>Operations</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="beb5ec317a219db6cb8501d2afa15775.html">list(session: Session)</a></td>
+            <td><p>Получает список всех банков из базы данных.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>List[{
+    &#39;id&#39;: Int
+    &#39;is_visible&#39;: Bool,
+    &#39;name&#39;: Str
+}]</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="9ac2c463c06f4a6708bc2753fddaa0e0.html">add(session: Session, bank_name: str)</a></td>
+            <td><p>Добавляет новый банк в базу данных.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+bank_name (str): Название нового банка.</code></pre>
+
+<p>Returns: </p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="a10a2a3c0386838502af1a85150d9a2a.html">edit(session: Session, bank_id: int, mode: bool, new_value: str)</a></td>
+            <td><p>Изменяет информацию о банке. Может обновить название или статус видимости.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+bank_id (int): Идентификатор банка.
+mode (bool): Режим изменения. Если True, изменяется название, если False - статус видимости.
+new_value (str, optional): Новое значение для обновления. По умолчанию None.</code></pre>
+
+<p>Returns: </p>
+
+<pre><code>&#39;message&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="0451943018a53c76e963f7f51a8cef38.html">delete(session: Session, bank_id: int)</a></td>
+            <td><p>Удаляет банк из базы данных, если у банка нет связанных реквизитов.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+bank_id (int): Идентификатор банка.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>Response: Сообщение об удалении банка или об ошибке в формате JSON.</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="0771b25ae72016088e94d8d9e68b08c5.html">check_exceeded_requisites(session: Session, step: float)</a></td>
+            <td><p>Проверяет реквизиты на превышение лимита при заданном шаге оплаты.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+step (float): Шаг оплаты.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>list[{
+    &#39;id&#39;: int
+    &#39;card_number&#39;: str
+    &#39;bank_id&#39;: int
+    &#39;name&#39;: str
+    &#39;wait_time&#39;: int
+    &#39;received&#39;: bool
+    &#39;received_limit&#39;: float
+    &#39;is_visible&#39;: bool
+}]</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="092f69d89726ceece146f8a3c0f0261c.html">list_req(session: Session, bank_id: int)</a></td>
+            <td><p>Получает список всех реквизитов указанного банка.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+bank_id (int): Идентификатор банка.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>list[{
+    &#39;id&#39;: int
+    &#39;card_number&#39;: str
+    &#39;bank_id&#39;: int
+    &#39;name&#39;: str
+    &#39;wait_time&#39;: int
+    &#39;received&#39;: bool
+    &#39;received_limit&#39;: float
+    &#39;is_visible&#39;: bool
+}]</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="1b7b2f9578c88a4c578fbcead0926637.html">add_req(session: Session, bank_id: int, card_number: str, name: str, wait_time: int, limit: int)</a></td>
+            <td><p>Добавляет новый реквизит для указанного банка.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+bank_id (int): Идентификатор банка.
+card_number (str): Номер карты реквизита.
+name (str): Имя владельца реквизита.
+wait_time (int): Время ожидания для реквизита.
+limit (int): Лимит получения средств на реквизит.</code></pre>
+
+<p>Returns: </p>
+
+<pre><code>&#39;message&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="24d250f7f35c93b3dcf95e1bbd127718.html">edit_req(session: Session, card_number: str, new_value: str, mode: str)</a></td>
+            <td><p>Изменяет информацию о реквизите в зависимости от указанного режима.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+req_id (int): Идентификатор реквизита, который нужно обновить.
+new_value (str): Новое значение для обновления.
+mode (str): Поле, которое нужно обновить (&#39;card_number&#39;, &#39;name&#39;, &#39;wait_time&#39;, &#39;received_limit&#39;, &#39;is_visible&#39;).</code></pre>
+
+<p>Returns: </p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="61670e91bdfeade84055335df0073d9a.html">delete_req(session: Session, card_number: str)</a></td>
+            <td><p>Изменяет информацию о реквизите в зависимости от указанного режима.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+req_id (int): Идентификатор реквизита, который нужно обновить.
+new_value (str): Новое значение для обновления.
+mode (str): Поле, которое нужно обновить (&#39;card_number&#39;, &#39;name&#39;, &#39;wait_time&#39;, &#39;received_limit&#39;, &#39;is_visible&#39;).</code></pre>
+
+<p>Returns: </p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>BankManager</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>stereotype</td>
+        <td><span class='label label-info'>null</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>visibility</td>
+        <td>public</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isFinalSpecialization</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isLeaf</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isActive</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='28d0626d42c3e93142a47448983254a8.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(BankManager→BaseMngr)</a></li>
+        
+        <li><a href='03ef578a5e51bde866af49df06704fd2.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(BankManager—main)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='28d0626d42c3e93142a47448983254a8.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(BankManager→BaseMngr)</a></li>
+        
+        <li><a href='03ef578a5e51bde866af49df06704fd2.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(BankManager—main)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

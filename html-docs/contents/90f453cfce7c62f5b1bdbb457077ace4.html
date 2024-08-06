@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>UserMngr</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>UserMngr</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-UMLClass"></span>
+          UMLClass
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>CRM</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='90f453cfce7c62f5b1bdbb457077ace4.html'><span class='node-icon staruml-icon icon-UMLClass'></span>UserMngr</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Функционал над профилем пользователя </p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+        
+        
+<section class="element-list">
+    <h3>Generalized Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='6fc305e5d9951c44b20dc9c3482184cb.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BaseMngr</a></li>
+        
+    </ul>
+</section>
+
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+      <section>
+        <h3>Operations</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="3d490ffc9000aa5a037b69206b4fc6d7.html">get_user(session: Session, tg_id: int)</a></td>
+            <td><p>Получение информации о пользователе по его Telegram ID. Включает в себя основные данные пользователя,
+такие как полное имя, телефон, адрес, статус и адрес пункта выдачи (если задан).</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Telegram ID пользователя.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;id&#39;:  Int
+&#39;tgid&#39;: Str
+&#39;login&#39;: Str
+&#39;full_name&#39;: Str
+&#39;phone&#39;: Str
+&#39;address&#39;: Str
+&#39;status&#39;: Str
+&#39;pvz_address&#39;: Str
+&#39;status_delivery&#39;: Str
+&#39;city&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="6579661d3af998ff222e77ec6d8c1945.html">create_user(session: Session, tgid: int, login: str, full_name: str, phone: str, address: str, city: str)</a></td>
+            <td><p>Создание нового пользователя с заданными параметрами. Включает в себя создание реферальной ссылки для нового пользователя.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Telegram ID пользователя.
+login (str): Логин пользователя.
+full_name (str): Полное имя пользователя.
+phone (str): Номер телефона пользователя.
+address (str): Адрес пользователя.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;success&#39;: Bool
+&#39;message&#39;: Str
+&#39;user_id&#39;: int</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="5b7467d6e303e25f47f7ea8614361d01.html">pvz_list(session: Session, city: str = None)</a></td>
+            <td><p>Получение списка пунктов выдачи, опционально фильтруемых по городу.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+city (str, optional): Название города для фильтрации пунктов выдачи. Если None, возвращает все пункты выдачи.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>List[{
+    &#39;id&#39;: Int
+    &#39;address&#39;: Str
+}] </code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="42f1fe5ede0234073950af877d5e913c.html">set_user(session: Session, tgid: int, login: str = None, full_name: str = None, phone: str = None, city: str = None, address: str = None, pvz: int = 0)</a></td>
+            <td><p>Обновление информации о пользователе, включая его полное имя, телефон, адрес и пункт выдачи.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+tgid (int): Telegram ID пользователя.
+username (str): Полное имя пользователя.
+phone (str): Номер телефона пользователя.
+address (str): Адрес пользователя.
+pvz (int, optional): Идентификатор пункта выдачи. Если не указан, значение не обновляется.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;success&#39;: Bool
+&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>UserMngr</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>stereotype</td>
+        <td><span class='label label-info'>null</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>visibility</td>
+        <td>public</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isFinalSpecialization</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isLeaf</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isActive</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='78fd63a222fe0ae2d0bc482a0b21d7e9.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(UserMngr→BaseMngr)</a></li>
+        
+        <li><a href='214e8566670ff447391e5b31715d3613.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(UserMngr—main)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='78fd63a222fe0ae2d0bc482a0b21d7e9.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(UserMngr→BaseMngr)</a></li>
+        
+        <li><a href='214e8566670ff447391e5b31715d3613.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(UserMngr—main)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>
