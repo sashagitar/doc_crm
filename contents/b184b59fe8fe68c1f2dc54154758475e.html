@@ -337,7 +337,7 @@ request_id (int): Идентификатор заявки.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="fad31114205555dbd7fc5c11a4741ef6.html">prod_list(session: Session, count: int, page: int, filters: dict = {})</a></td>
+            <td><a href="fad31114205555dbd7fc5c11a4741ef6.html">prod_list(session: Session, count: int, page: int, filters: dict = {}, sort_by: str = None)</a></td>
             <td><p>Получение списка видимых и неархивированных товаров по фильтрам с пагинацией.</p>
 
 <p>Args:</p>
@@ -348,11 +348,12 @@ page (int): Номер страницы.
 filters (dict, optional): Словарь фильтров для применения к запросу.
 { 
     &#39;section&#39;: str 
-    &#39;category_id&#39;: int
+    &#39;category_ids&#39;: List[int]
     &#39;brand&#39;: List[str]
     &#39;price_min&#39;: int
     &#39;price_max&#39;: int
-}</code></pre>
+}
+sort_by (str, optional): Поле для сортировки (&quot;price_asc&quot; или &quot;price_desc&quot;).</code></pre>
 
 <p>Returns:</p>
 

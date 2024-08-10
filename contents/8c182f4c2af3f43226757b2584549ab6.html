@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>prod_list</title>
+    <title>sort_by</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,14 +19,14 @@
 
       <!-- Name Title -->
 
-      <h1>prod_list</h1>
+      <h1>sort_by</h1>
 
       <!-- Type and Stereotype -->
 
       <section style="margin-top: .5em;">
         <span class="alert alert-info">
-          <span class="node-icon staruml-icon icon-UMLOperation"></span>
-          UMLOperation
+          <span class="node-icon staruml-icon icon-UMLParameter"></span>
+          UMLParameter
         </span>
         
       </section>
@@ -49,6 +49,9 @@
           <span>::</span>
           <span class="label label-info"><a href='fad31114205555dbd7fc5c11a4741ef6.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>prod_list</a></span>
         
+          <span>::</span>
+          <span class="label label-info"><a href='8c182f4c2af3f43226757b2584549ab6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>sort_by</a></span>
+        
       </section>
 
       <!-- Diagram -->
@@ -62,38 +65,7 @@
         <h3>Description</h3>
         <div>
           
-            <p>Получение списка видимых и неархивированных товаров по фильтрам с пагинацией.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-count (int): Количество товаров на страницу.
-page (int): Номер страницы.
-filters (dict, optional): Словарь фильтров для применения к запросу.
-{ 
-    &#39;section&#39;: str 
-    &#39;category_ids&#39;: List[int]
-    &#39;brand&#39;: List[str]
-    &#39;price_min&#39;: int
-    &#39;price_max&#39;: int
-}
-sort_by (str, optional): Поле для сортировки (&quot;price_asc&quot; или &quot;price_desc&quot;).</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>&#39;products&#39;: {
-    &#39;id&#39;: Int
-    &#39;link&#39;: Str
-    &#39;brand&#39;: Str
-    &#39;model&#39;: Str
-    &#39;sku&#39;: Str
-    &#39;category&#39;: Str
-    &#39;price&#39;: Float
-    &#39;images&#39;:  Str
-}
-&#39;total&#39;: Int
-&#39;page&#39;: Int
-&#39;pages&#39;: Int</code></pre>
+            <span class="label label-info">none</span>
           
         </div>
       </section>
@@ -161,54 +133,6 @@ sort_by (str, optional): Поле для сортировки (&quot;price_asc&q
 
       <!-- Parameters -->
 
-      
-      <section>
-        <h3>Parameters</h3>
-        <table class="table table-striped table-bordered">
-          <tr>
-            <th>Direction</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="c68d26eb6eb06229cdb33db3d6e07571.html">session</a></td>
-            <td>Session </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="5f4acd9f6972e2fded6ec099486d857f.html">count</a></td>
-            <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="7f6d0477664ede07690f292abeae260a.html">page</a></td>
-            <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="b183c6570e98db2e57bf7762e52cce09.html">filters</a></td>
-            <td>dict </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="8c182f4c2af3f43226757b2584549ab6.html">sort_by</a></td>
-            <td>str </td>
-            <td></td>
-          </tr>
-          
-        </table>
-      </section>
       
 
       <!-- Diagrams -->
@@ -295,7 +219,7 @@ sort_by (str, optional): Поле для сортировки (&quot;price_asc&q
     
     <tr>
         <td>name</td>
-        <td>prod_list</td>
+        <td>sort_by</td>
     </tr>
     
     
@@ -356,25 +280,8 @@ sort_by (str, optional): Поле для сортировки (&quot;price_asc&q
     
     
     <tr>
-        <td>parameters</td>
-        <td>
-            
-            
-            <a href='c68d26eb6eb06229cdb33db3d6e07571.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
-            
-            <span>, </span>
-            <a href='5f4acd9f6972e2fded6ec099486d857f.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>count</a>
-            
-            <span>, </span>
-            <a href='7f6d0477664ede07690f292abeae260a.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>page</a>
-            
-            <span>, </span>
-            <a href='b183c6570e98db2e57bf7762e52cce09.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>filters</a>
-            
-            <span>, </span>
-            <a href='8c182f4c2af3f43226757b2584549ab6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>sort_by</a>
-            
-        </td>
+        <td>type</td>
+        <td>str</td>
     </tr>
     
     
@@ -382,45 +289,7 @@ sort_by (str, optional): Поле для сортировки (&quot;price_asc&q
     
     
     <tr>
-        <td>raisedExceptions</td>
-        <td>
-            
-        </td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>concurrency</td>
-        <td>sequential</td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>isQuery</td>
-        <td><span class='label label-info'>false</span></td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>isAbstract</td>
-        <td><span class='label label-info'>false</span></td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>specification</td>
+        <td>multiplicity</td>
         <td></td>
     </tr>
     
@@ -428,7 +297,46 @@ sort_by (str, optional): Поле для сортировки (&quot;price_asc&q
     
     
     
+    <tr>
+        <td>isReadOnly</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
     
+    
+    
+    
+    
+    <tr>
+        <td>isOrdered</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isUnique</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>defaultValue</td>
+        <td>None</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>direction</td>
+        <td>in</td>
+    </tr>
     
     
     
