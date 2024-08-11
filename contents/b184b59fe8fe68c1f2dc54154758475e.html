@@ -162,7 +162,7 @@
           
           <tr>
             <td>public</td>
-            <td><a href="51045224442bfd91e0dec4fc6424750b.html">get_categories(session: Session)</a></td>
+            <td><a href="51045224442bfd91e0dec4fc6424750b.html">get_categories(session: Session, section_id: int = None)</a></td>
             <td><p>Получение списка категорий товаров из базы данных.</p>
 
 <p>Данный метод запрашивает у сессии базы данных все записи категорий и
@@ -170,7 +170,9 @@
 
 <p>Args:</p>
 
-<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (int, optional): Идентификатор раздела для фильтрации категорий.
+                                 Если None, возвращаются все категории.</code></pre>
 
 <p>Returns:</p>
 
@@ -201,7 +203,7 @@
           
           <tr>
             <td>public</td>
-            <td><a href="07fe201e4a1d19d1bf4133d59c8b2a44.html">get_brands(session: Session)</a></td>
+            <td><a href="07fe201e4a1d19d1bf4133d59c8b2a44.html">get_brands(session: Session, section_id: int = None)</a></td>
             <td><p>Получение списка уникальных брендов из базы данных.</p>
 
 <p>Данный метод запрашивает у сессии базы данных уникальные записи брендов из таблицы товаров и
@@ -209,7 +211,9 @@
 
 <p>Args:</p>
 
-<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+ section_id (int, optional): Идентификатор раздела для фильтрации брендов.
+                                 Если None, возвращаются все уникальные бренды.</code></pre>
 
 <p>Returns:</p>
 
