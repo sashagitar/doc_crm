@@ -222,6 +222,22 @@ section_id (int, optional): Идентификатор раздела для ф�
           
           <tr>
             <td>public</td>
+            <td><a href="f05854e77d72355c1190bf20acd2d448.html">get_price_range(session: Session, section_id: int = None)</a></td>
+            <td><p>Получает минимальную и максимальную цену по всей базе данных или по конкретному разделу.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (Optional[int]): Идентификатор раздела. Если не указан, возвращает диапазон цен по всей базе данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;max_price&#39;: Float
+&#39;min_price&#39;: Float</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
             <td><a href="0fd7de1b51df062338e6382316d60e9b.html">calculate_product(session: Session, tgid: int, link: str, size: str, cost: float, category_id: int)</a></td>
             <td><p>Создание товара и добавление его в расчетные для пользователя.</p>
 
