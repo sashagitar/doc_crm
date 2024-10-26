@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>edit_req_all</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>edit_req_all</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-UMLOperation"></span>
+          UMLOperation
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>CRM</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='332069e93d59c23b9c186b5e2800aa31.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BankManager</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='3bef85dd1531f1073573928dc5dafed5.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>edit_req_all</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Редактирует существующий реквизит.</p>
+
+<p>Args:
+    session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+    requisite<em>id (int): Идентификатор редактируемого реквизита.
+    bank</em>id (int): Идентификатор банка.
+    card<em>number (str): Номер карты реквизита.
+    name (str): Имя владельца реквизита.
+    wait</em>time (int): Время ожидания для реквизита.
+    limit (int): Лимит получения средств на реквизит.</p>
+
+<p>Returns: </p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+      <section>
+        <h3>Parameters</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Direction</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="da5d6c48705774aad40d6c9e26190aa6.html">session</a></td>
+            <td>Session </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="f8246763249a0a3b88878c9b5ce9a399.html">requisite_id</a></td>
+            <td>int </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="682910926629adcbaae67d6552c71db8.html">bank_id</a></td>
+            <td>int </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="da4ce7d685a8b258c97075d9286b3bbf.html">card_number</a></td>
+            <td>str </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="2810edfc216cf25834ab16e06b31e99e.html">name</a></td>
+            <td>str </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="8f4b9583f6cdc5feeaf304fb883e6fbb.html">wait_time</a></td>
+            <td>int </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="452a822a4014e5388a1f8062cd5a33f2.html">limit</a></td>
+            <td>int </td>
+            <td><p>Редактирует существующий реквизит.</p>
+
+<p>Args:
+    session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+    requisite<em>id (int): Идентификатор редактируемого реквизита.
+    bank</em>id (int): Идентификатор банка.
+    card<em>number (str): Номер карты реквизита.
+    name (str): Имя владельца реквизита.
+    wait</em>time (int): Время ожидания для реквизита.
+    limit (int): Лимит получения средств на реквизит.</p>
+
+<p>Returns:
+    message: str</p></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>edit_req_all</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>stereotype</td>
+        <td><span class='label label-info'>null</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>visibility</td>
+        <td>public</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>isStatic</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isLeaf</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>parameters</td>
+        <td>
+            
+            
+            <a href='da5d6c48705774aad40d6c9e26190aa6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            
+            <span>, </span>
+            <a href='f8246763249a0a3b88878c9b5ce9a399.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>requisite_id</a>
+            
+            <span>, </span>
+            <a href='682910926629adcbaae67d6552c71db8.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>bank_id</a>
+            
+            <span>, </span>
+            <a href='da4ce7d685a8b258c97075d9286b3bbf.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>card_number</a>
+            
+            <span>, </span>
+            <a href='2810edfc216cf25834ab16e06b31e99e.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>name</a>
+            
+            <span>, </span>
+            <a href='8f4b9583f6cdc5feeaf304fb883e6fbb.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>wait_time</a>
+            
+            <span>, </span>
+            <a href='452a822a4014e5388a1f8062cd5a33f2.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>limit</a>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>raisedExceptions</td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>concurrency</td>
+        <td>sequential</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isQuery</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>specification</td>
+        <td></td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+
+
+      <!-- Owned Elements -->
+
+      
+      
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

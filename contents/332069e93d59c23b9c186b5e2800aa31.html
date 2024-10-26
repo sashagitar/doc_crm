@@ -317,6 +317,29 @@ mode (str): Поле, которое нужно обновить (&#39;card_numb
           
           <tr>
             <td>public</td>
+            <td><a href="3bef85dd1531f1073573928dc5dafed5.html">edit_req_all(session: Session, requisite_id: int, bank_id: int, card_number: str, name: str, wait_time: int, limit: int)</a></td>
+            <td><p>Редактирует существующий реквизит.</p>
+
+<p>Args:
+    session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+    requisite<em>id (int): Идентификатор редактируемого реквизита.
+    bank</em>id (int): Идентификатор банка.
+    card<em>number (str): Номер карты реквизита.
+    name (str): Имя владельца реквизита.
+    wait</em>time (int): Время ожидания для реквизита.
+    limit (int): Лимит получения средств на реквизит.</p>
+
+<p>Returns: </p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
             <td><a href="61670e91bdfeade84055335df0073d9a.html">delete_req(session: Session, card_number: str)</a></td>
             <td><p>Изменяет информацию о реквизите в зависимости от указанного режима.</p>
 
