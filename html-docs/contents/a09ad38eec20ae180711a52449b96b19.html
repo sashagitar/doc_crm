@@ -74,11 +74,13 @@ model (str): Модель товара.
 sku (str): Стоковый номер товара (SKU).
 is_visible (bool): Флаг видимости товара.
 sections (list): Список идентификаторов разделов, к которым относится товар.
-sizes (list): Список размеров товара.</code></pre>
+sizes (dict): Список размеров товара. {size: str, price: float)</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Результат добавления товара в формате JSON.</code></pre>
+<pre><code>&#39;message&#39;: Str,
+&#39;product_id&#39;: Int
+</code></pre>
           
         </div>
       </section>
@@ -216,7 +218,7 @@ sizes (list): Список размеров товара.</code></pre>
           <tr>
             <td>in</td>
             <td><a href="84ffb582d91b600c392e78c80d9f9ab4.html">sizes</a></td>
-            <td>list </td>
+            <td>dict </td>
             <td><p>Добавляет новый товар в базу данных.</p>
 
 <p>Args:
@@ -228,7 +230,7 @@ sizes (list): Список размеров товара.</code></pre>
     sku (str): Стоковый номер товара (SKU).
     is</em>visible (bool): Флаг видимости товара.
     sections (list): Список идентификаторов разделов, к которым относится товар.
-    sizes (list): Список размеров товара.</p>
+    sizes (dict): Список размеров товара.</p>
 
 <p>Returns:
         jsonify: Результат добавления товара в формате JSON.</p></td>

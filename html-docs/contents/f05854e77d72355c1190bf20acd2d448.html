@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>size</title>
+    <title>get_price_range</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>size</h1>
+      <h1>get_price_range</h1>
 
       <!-- Type and Stereotype -->
 
@@ -44,10 +44,10 @@
           <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='e3494d49f42fbc1599682059d5b5e1c0.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ProductsManager</a></span>
+          <span class="label label-info"><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='f2160db9abac87d80beb604f4fbb1a09.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>size</a></span>
+          <span class="label label-info"><a href='f05854e77d72355c1190bf20acd2d448.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>get_price_range</a></span>
         
       </section>
 
@@ -62,22 +62,17 @@
         <h3>Description</h3>
         <div>
           
-            <p>Создает новый размер для продукта.</p>
+            <p>Получает минимальную и максимальную цену по всей базе данных или по конкретному разделу.</p>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-prod_id (int): Идентификатор продукта.
-num (str): Номер размера.
-cost (float): Стоимость размера.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (Optional[int]): Идентификатор раздела. Если не указан, возвращает диапазон цен по всей базе данных.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>&#39;message&#39;: Str</code></pre>
-
-<p>Если False:</p>
-
-<pre><code>&#39;error&#39;: Str</code></pre>
+<pre><code>&#39;max_price&#39;: Float
+&#39;min_price&#39;: Float</code></pre>
           
         </div>
       </section>
@@ -158,29 +153,15 @@ cost (float): Стоимость размера.</code></pre>
           
           <tr>
             <td>in</td>
-            <td><a href="d5196c23144e5d0aa66a1cc54a4c86ef.html">session</a></td>
+            <td><a href="2351ec745d244a6a09205c73a65ce943.html">session</a></td>
             <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="f025d899f266c3f6f0c1870236d6f8a2.html">prod_id</a></td>
+            <td><a href="5f1b1c71f3f49dba91bc5ffa8b4fa7a5.html">section_id</a></td>
             <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="896e606811599ba80164c93e1766f8bb.html">num</a></td>
-            <td>str </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="a8d6b14bae6272ce75d7d168fdcd0ea6.html">cost</a></td>
-            <td>float </td>
             <td></td>
           </tr>
           
@@ -272,7 +253,7 @@ cost (float): Стоимость размера.</code></pre>
     
     <tr>
         <td>name</td>
-        <td>size</td>
+        <td>get_price_range</td>
     </tr>
     
     
@@ -337,16 +318,10 @@ cost (float): Стоимость размера.</code></pre>
         <td>
             
             
-            <a href='d5196c23144e5d0aa66a1cc54a4c86ef.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            <a href='2351ec745d244a6a09205c73a65ce943.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='f025d899f266c3f6f0c1870236d6f8a2.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>prod_id</a>
-            
-            <span>, </span>
-            <a href='896e606811599ba80164c93e1766f8bb.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>num</a>
-            
-            <span>, </span>
-            <a href='a8d6b14bae6272ce75d7d168fdcd0ea6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>cost</a>
+            <a href='5f1b1c71f3f49dba91bc5ffa8b4fa7a5.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>section_id</a>
             
         </td>
     </tr>

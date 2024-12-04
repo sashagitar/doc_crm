@@ -166,7 +166,21 @@ tg_id (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Информация о пользователе в формате JSON.</code></pre></td>
+<pre><code>dict: {
+        &#39;id&#39;: Int,              
+        &#39;tg_id&#39;: Int,             
+        &#39;full_name&#39;: Str,         
+        &#39;phone&#39;: Str,              
+        &#39;address&#39;: Str,           
+        &#39;status&#39;: Str,             
+        &#39;pvz_address&#39;: Str,         
+        &#39;referal_links&#39;: List[Str],пользователя
+        &#39;total_bonus&#39;: Float    
+    }</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -183,7 +197,11 @@ user_id (int): Идентификатор пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции удаления в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -200,7 +218,15 @@ search (str, optional): Строка для поиска пользовател�
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список пользователей с реферальными ссылками и суммой бонусов в формате JSON.</code></pre></td>
+<pre><code>List[{
+    &#39;id&#39;: Int,
+    &#39;tg_id&#39;: Int,
+    &#39;full_name&#39;: Str,
+    &#39;phone&#39;: Str,
+    &#39;address&#39;: Str,
+    &#39;referal_links&#39;: Str,
+    &#39;total_bonus&#39;: Float
+}]</code></pre></td>
           </tr>
           
           <tr>
@@ -216,7 +242,11 @@ link (str): Реферальная ссылка.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции добавления реферальной ссылки в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -232,7 +262,11 @@ link (str): Новое значение реферальной ссылки.</co
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции изменения реферальной ссылки в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -248,7 +282,11 @@ link_id (int): Идентификатор реферальной ссылки.</
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции удаления реферальной ссылки в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -264,7 +302,11 @@ count (int): Количество бонусов для добавления.</c
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции добавления бонусов в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
@@ -280,7 +322,11 @@ count (int): Количество бонусов для вычитания.</cod
 
 <p>Returns:</p>
 
-<pre><code>JSON: Результат операции вычитания бонусов в формате JSON.</code></pre></td>
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
         </table>

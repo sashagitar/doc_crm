@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>size</title>
+    <title>session</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,14 +19,14 @@
 
       <!-- Name Title -->
 
-      <h1>size</h1>
+      <h1>session</h1>
 
       <!-- Type and Stereotype -->
 
       <section style="margin-top: .5em;">
         <span class="alert alert-info">
-          <span class="node-icon staruml-icon icon-UMLOperation"></span>
-          UMLOperation
+          <span class="node-icon staruml-icon icon-UMLParameter"></span>
+          UMLParameter
         </span>
         
       </section>
@@ -44,10 +44,13 @@
           <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='e3494d49f42fbc1599682059d5b5e1c0.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ProductsManager</a></span>
+          <span class="label label-info"><a href='332069e93d59c23b9c186b5e2800aa31.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BankManager</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='f2160db9abac87d80beb604f4fbb1a09.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>size</a></span>
+          <span class="label label-info"><a href='3bef85dd1531f1073573928dc5dafed5.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>edit_req_all</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='da5d6c48705774aad40d6c9e26190aa6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a></span>
         
       </section>
 
@@ -62,22 +65,7 @@
         <h3>Description</h3>
         <div>
           
-            <p>Создает новый размер для продукта.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-prod_id (int): Идентификатор продукта.
-num (str): Номер размера.
-cost (float): Стоимость размера.</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>&#39;message&#39;: Str</code></pre>
-
-<p>Если False:</p>
-
-<pre><code>&#39;error&#39;: Str</code></pre>
+            <span class="label label-info">none</span>
           
         </div>
       </section>
@@ -145,47 +133,6 @@ cost (float): Стоимость размера.</code></pre>
 
       <!-- Parameters -->
 
-      
-      <section>
-        <h3>Parameters</h3>
-        <table class="table table-striped table-bordered">
-          <tr>
-            <th>Direction</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="d5196c23144e5d0aa66a1cc54a4c86ef.html">session</a></td>
-            <td>Session </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="f025d899f266c3f6f0c1870236d6f8a2.html">prod_id</a></td>
-            <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="896e606811599ba80164c93e1766f8bb.html">num</a></td>
-            <td>str </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="a8d6b14bae6272ce75d7d168fdcd0ea6.html">cost</a></td>
-            <td>float </td>
-            <td></td>
-          </tr>
-          
-        </table>
-      </section>
       
 
       <!-- Diagrams -->
@@ -272,7 +219,7 @@ cost (float): Стоимость размера.</code></pre>
     
     <tr>
         <td>name</td>
-        <td>size</td>
+        <td>session</td>
     </tr>
     
     
@@ -333,22 +280,8 @@ cost (float): Стоимость размера.</code></pre>
     
     
     <tr>
-        <td>parameters</td>
-        <td>
-            
-            
-            <a href='d5196c23144e5d0aa66a1cc54a4c86ef.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
-            
-            <span>, </span>
-            <a href='f025d899f266c3f6f0c1870236d6f8a2.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>prod_id</a>
-            
-            <span>, </span>
-            <a href='896e606811599ba80164c93e1766f8bb.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>num</a>
-            
-            <span>, </span>
-            <a href='a8d6b14bae6272ce75d7d168fdcd0ea6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>cost</a>
-            
-        </td>
+        <td>type</td>
+        <td>Session</td>
     </tr>
     
     
@@ -356,45 +289,7 @@ cost (float): Стоимость размера.</code></pre>
     
     
     <tr>
-        <td>raisedExceptions</td>
-        <td>
-            
-        </td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>concurrency</td>
-        <td>sequential</td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>isQuery</td>
-        <td><span class='label label-info'>false</span></td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>isAbstract</td>
-        <td><span class='label label-info'>false</span></td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>specification</td>
+        <td>multiplicity</td>
         <td></td>
     </tr>
     
@@ -402,7 +297,46 @@ cost (float): Стоимость размера.</code></pre>
     
     
     
+    <tr>
+        <td>isReadOnly</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
     
+    
+    
+    
+    
+    <tr>
+        <td>isOrdered</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isUnique</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>defaultValue</td>
+        <td></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>direction</td>
+        <td>in</td>
+    </tr>
     
     
     

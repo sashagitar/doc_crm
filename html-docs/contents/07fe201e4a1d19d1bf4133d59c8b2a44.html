@@ -69,7 +69,9 @@
 
 <p>Args:</p>
 
-<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+ section_id (int, optional): Идентификатор раздела для фильтрации брендов.
+                                 Если None, возвращаются все уникальные бренды.</code></pre>
 
 <p>Returns:</p>
 
@@ -168,6 +170,13 @@
 <p>Returns:</p>
 
 <pre><code>List[Str]</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="184d22a3bd0ccb9d7409c64abd7839d1.html">section_id</a></td>
+            <td>int </td>
+            <td></td>
           </tr>
           
         </table>
@@ -324,6 +333,9 @@
             
             
             <a href='a67d787ada7d21ea470505e57c226245.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            
+            <span>, </span>
+            <a href='184d22a3bd0ccb9d7409c64abd7839d1.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>section_id</a>
             
         </td>
     </tr>

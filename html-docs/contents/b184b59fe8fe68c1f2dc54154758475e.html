@@ -162,7 +162,7 @@
           
           <tr>
             <td>public</td>
-            <td><a href="51045224442bfd91e0dec4fc6424750b.html">get_categories(session: Session)</a></td>
+            <td><a href="51045224442bfd91e0dec4fc6424750b.html">get_categories(session: Session, section_id: int = None)</a></td>
             <td><p>Получение списка категорий товаров из базы данных.</p>
 
 <p>Данный метод запрашивает у сессии базы данных все записи категорий и
@@ -170,7 +170,9 @@
 
 <p>Args:</p>
 
-<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (int, optional): Идентификатор раздела для фильтрации категорий.
+                                 Если None, возвращаются все категории.</code></pre>
 
 <p>Returns:</p>
 
@@ -201,7 +203,7 @@
           
           <tr>
             <td>public</td>
-            <td><a href="07fe201e4a1d19d1bf4133d59c8b2a44.html">get_brands(session: Session)</a></td>
+            <td><a href="07fe201e4a1d19d1bf4133d59c8b2a44.html">get_brands(session: Session, section_id: int = None)</a></td>
             <td><p>Получение списка уникальных брендов из базы данных.</p>
 
 <p>Данный метод запрашивает у сессии базы данных уникальные записи брендов из таблицы товаров и
@@ -209,11 +211,29 @@
 
 <p>Args:</p>
 
-<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+ section_id (int, optional): Идентификатор раздела для фильтрации брендов.
+                                 Если None, возвращаются все уникальные бренды.</code></pre>
 
 <p>Returns:</p>
 
 <pre><code>List[Str]</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="f05854e77d72355c1190bf20acd2d448.html">get_price_range(session: Session, section_id: int = None)</a></td>
+            <td><p>Получает минимальную и максимальную цену по всей базе данных или по конкретному разделу.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (Optional[int]): Идентификатор раздела. Если не указан, возвращает диапазон цен по всей базе данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;max_price&#39;: Float
+&#39;min_price&#39;: Float</code></pre></td>
           </tr>
           
           <tr>
@@ -337,7 +357,7 @@ request_id (int): Идентификатор заявки.</code></pre>
           
           <tr>
             <td>public</td>
-            <td><a href="fad31114205555dbd7fc5c11a4741ef6.html">prod_list(session: Session, count: int, page: int, filters: dict = {})</a></td>
+            <td><a href="fad31114205555dbd7fc5c11a4741ef6.html">prod_list(session: Session, count: int, page: int, filters: dict = {}, sort_by: str = None)</a></td>
             <td><p>Получение списка видимых и неархивированных товаров по фильтрам с пагинацией.</p>
 
 <p>Args:</p>
@@ -347,12 +367,13 @@ count (int): Количество товаров на страницу.
 page (int): Номер страницы.
 filters (dict, optional): Словарь фильтров для применения к запросу.
 { 
-    &#39;section&#39;: str 
-    &#39;category_id&#39;: int
+    &#39;section&#39;: int
+    &#39;category_ids&#39;: List[int]
     &#39;brand&#39;: List[str]
     &#39;price_min&#39;: int
     &#39;price_max&#39;: int
-}</code></pre>
+}
+sort_by (str, optional): Поле для сортировки (&quot;price_asc&quot; или &quot;price_desc&quot;).</code></pre>
 
 <p>Returns:</p>
 

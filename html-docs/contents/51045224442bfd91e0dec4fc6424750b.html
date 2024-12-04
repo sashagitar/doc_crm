@@ -29,8 +29,6 @@
           UMLOperation
         </span>
         
-          <span style="margin-left: 10px" class="alert alert-info">«»</span>
-        
       </section>
 
       <!-- Path -->
@@ -71,7 +69,9 @@
 
 <p>Args:</p>
 
-<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (int, optional): Идентификатор раздела для фильтрации категорий.
+                                 Если None, возвращаются все категории.</code></pre>
 
 <p>Returns:</p>
 
@@ -160,6 +160,13 @@
             <td>in</td>
             <td><a href="2d5730d41012118e617d52d6dde71e67.html">session</a></td>
             <td>Session </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="dc2fffa392418fe333e64a166796b406.html">section_id</a></td>
+            <td>int </td>
             <td></td>
           </tr>
           
@@ -266,7 +273,7 @@
     
     <tr>
         <td>stereotype</td>
-        <td></td>
+        <td><span class='label label-info'>null</span></td>
     </tr>
     
     
@@ -317,6 +324,9 @@
             
             
             <a href='2d5730d41012118e617d52d6dde71e67.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            
+            <span>, </span>
+            <a href='dc2fffa392418fe333e64a166796b406.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>section_id</a>
             
         </td>
     </tr>

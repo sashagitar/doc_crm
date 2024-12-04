@@ -29,8 +29,6 @@
           UMLOperation
         </span>
         
-          <span style="margin-left: 10px" class="alert alert-info">«»</span>
-        
       </section>
 
       <!-- Path -->
@@ -73,12 +71,13 @@ count (int): Количество товаров на страницу.
 page (int): Номер страницы.
 filters (dict, optional): Словарь фильтров для применения к запросу.
 { 
-    &#39;section&#39;: str 
-    &#39;category_id&#39;: int
+    &#39;section&#39;: int
+    &#39;category_ids&#39;: List[int]
     &#39;brand&#39;: List[str]
     &#39;price_min&#39;: int
     &#39;price_max&#39;: int
-}</code></pre>
+}
+sort_by (str, optional): Поле для сортировки (&quot;price_asc&quot; или &quot;price_desc&quot;).</code></pre>
 
 <p>Returns:</p>
 
@@ -201,6 +200,13 @@ filters (dict, optional): Словарь фильтров для примене�
             <td></td>
           </tr>
           
+          <tr>
+            <td>in</td>
+            <td><a href="8c182f4c2af3f43226757b2584549ab6.html">sort_by</a></td>
+            <td>str </td>
+            <td></td>
+          </tr>
+          
         </table>
       </section>
       
@@ -304,7 +310,7 @@ filters (dict, optional): Словарь фильтров для примене�
     
     <tr>
         <td>stereotype</td>
-        <td></td>
+        <td><span class='label label-info'>null</span></td>
     </tr>
     
     
@@ -364,6 +370,9 @@ filters (dict, optional): Словарь фильтров для примене�
             
             <span>, </span>
             <a href='b183c6570e98db2e57bf7762e52cce09.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>filters</a>
+            
+            <span>, </span>
+            <a href='8c182f4c2af3f43226757b2584549ab6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>sort_by</a>
             
         </td>
     </tr>
