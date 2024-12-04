@@ -67,11 +67,23 @@
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-filters (dict): Словарь с фильтрами для запроса товаров.</code></pre>
+filters (dict, optional): Словарь с фильтрами для запроса товаров.
+{
+    &#39;category_ids&#39;: List(Int),
+    &#39;is_archived&#39;: Bool
+}</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>jsonify: Список товаров, соответствующих фильтрам, в формате JSON.</code></pre>
+<p>   List[{
+        &#39;id&#39;: Int,
+        &#39;photo&#39;: Str,
+        &#39;title&#39;: Str,
+        &#39;sku&#39;: Str,
+        &#39;min<em>price&#39;: Float,
+        &#39;max</em>price&#39;: Float,
+        &#39;visibility&#39;: Bool
+    }]</p>
           
         </div>
       </section>

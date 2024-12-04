@@ -71,7 +71,21 @@ tg_id (int): Telegram ID пользователя.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>JSON: Информация о пользователе в формате JSON.</code></pre>
+<pre><code>dict: {
+        &#39;id&#39;: Int,              
+        &#39;tg_id&#39;: Int,             
+        &#39;full_name&#39;: Str,         
+        &#39;phone&#39;: Str,              
+        &#39;address&#39;: Str,           
+        &#39;status&#39;: Str,             
+        &#39;pvz_address&#39;: Str,         
+        &#39;referal_links&#39;: List[Str],пользователя
+        &#39;total_bonus&#39;: Float    
+    }</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre>
           
         </div>
       </section>

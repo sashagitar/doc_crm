@@ -73,7 +73,15 @@ search (str, optional): Строка для поиска пользовател�
 
 <p>Returns:</p>
 
-<pre><code>JSON: Список пользователей с реферальными ссылками и суммой бонусов в формате JSON.</code></pre>
+<pre><code>List[{
+    &#39;id&#39;: Int,
+    &#39;tg_id&#39;: Int,
+    &#39;full_name&#39;: Str,
+    &#39;phone&#39;: Str,
+    &#39;address&#39;: Str,
+    &#39;referal_links&#39;: Str,
+    &#39;total_bonus&#39;: Float
+}]</code></pre>
           
         </div>
       </section>
