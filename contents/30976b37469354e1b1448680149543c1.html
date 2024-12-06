@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>BaseMngr</title>
+    <title>ModeratorsManager</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>BaseMngr</h1>
+      <h1>ModeratorsManager</h1>
 
       <!-- Type and Stereotype -->
 
@@ -44,7 +44,7 @@
           <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='6fc305e5d9951c44b20dc9c3482184cb.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BaseMngr</a></span>
+          <span class="label label-info"><a href='30976b37469354e1b1448680149543c1.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ModeratorsManager</a></span>
         
       </section>
 
@@ -59,7 +59,7 @@
         <h3>Description</h3>
         <div>
           
-            <p>Управление движком сессий для запросов, запуска методов  и обработке ошибок</p>
+            <p>Менеджер для работы с модераторами.</p>
           
         </div>
       </section>
@@ -82,39 +82,19 @@
       
         
         
-
-
-        
-        
 <section class="element-list">
-    <h3>Specialized Elements</h3>
+    <h3>Generalized Elements</h3>
     <ul class="nav nav-list">
         
-        <li><a href='fb58e4c74e55a4b2a8f16aa6f58ffe32.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BonusMngr</a></li>
-        
-        <li><a href='b184b59fe8fe68c1f2dc54154758475e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MarketMngr</a></li>
-        
-        <li><a href='e1e2d3c59ba7b525a44e7cd021097147.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayMngr</a></li>
-        
-        <li><a href='90f453cfce7c62f5b1bdbb457077ace4.html'><span class='node-icon staruml-icon icon-UMLClass'></span>UserMngr</a></li>
-        
-        <li><a href='332069e93d59c23b9c186b5e2800aa31.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BankManager</a></li>
-        
-        <li><a href='ccd8ffa9883eb13efc3d63e3b46b4751.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DeliveriesManager</a></li>
-        
-        <li><a href='8099045c178e80c0c9afc602bbbaad08.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayManager</a></li>
-        
-        <li><a href='e3494d49f42fbc1599682059d5b5e1c0.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ProductsManager</a></li>
-        
-        <li><a href='7a50efdb296e3fdf7b52fcf69d4a89f8.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ReferalsManager</a></li>
-        
-        <li><a href='762add597e5425d2cc02afa93f391a44.html'><span class='node-icon staruml-icon icon-UMLClass'></span>RequestsManager</a></li>
-        
-        <li><a href='30976b37469354e1b1448680149543c1.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ModeratorsManager</a></li>
+        <li><a href='6fc305e5d9951c44b20dc9c3482184cb.html'><span class='node-icon staruml-icon icon-UMLClass'></span>BaseMngr</a></li>
         
     </ul>
 </section>
 
+
+
+        
+        
 
 
         
@@ -176,14 +156,63 @@
           
           <tr>
             <td>public</td>
-            <td><a href="b8d25c83ff0cadf520757ca3c91ad166.html">__init__(self, connection_string: str)</a></td>
-            <td><p>Создание менеджера сессий</p></td>
+            <td><a href="a64cf836436373bdefdb30bc728888e0.html">logi(session: Session, login: str, password: str)</a></td>
+            <td><p>Проверяет существование модератора с указанным логином и паролем.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для работы с базой данных.
+login (str): Логин модератора.
+password (str): Пароль модератора.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
           <tr>
             <td>public</td>
-            <td><a href="7984d10858c46c00428800eee69a870e.html">run(method: str, args: dict)</a></td>
-            <td><p>Метод запуска медота менеджера в отдельной сессии</p></td>
+            <td><a href="2d217caa56bfbdd537b962ff51985631.html">registration(session: Session, login: str, password: str, access: int)</a></td>
+            <td><p>Регистрирует нового модератора.</p>
+
+<p>Args:
+    session (Session): Сессия SQLAlchemy для работы с базой данных.
+    login (str): Логин нового модератора.
+    password (str): Пароль нового модератора
+    access (int): Уровень доступа нового модератора.</p>
+
+<p>Returns:</p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="acd69034f1ca865b8a581de9eb5be68f.html">reset_password(session: Session, login: str, password: str, new_password: str)</a></td>
+            <td><p>Сбрасывает пароль модератора, если введённые текущие логин и пароль верны.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для работы с базой данных.
+login (str): Логин модератора.
+password (str): Текущий пароль модератора.
+new_password (str): Новый пароль для модератора.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre></td>
           </tr>
           
         </table>
@@ -286,7 +315,7 @@
     
     <tr>
         <td>name</td>
-        <td>BaseMngr</td>
+        <td>ModeratorsManager</td>
     </tr>
     
     
@@ -393,27 +422,9 @@
     <h3>Relationships</h3>
     <ul class="nav nav-list">
         
-        <li><a href='b713416fff331b08efefdcbfa4050f1a.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(BonusMngr→BaseMngr)</a></li>
-        
-        <li><a href='205fbe73502864e1e20ed7cb3c2e900a.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(MarketMngr→BaseMngr)</a></li>
-        
-        <li><a href='be2e7952565d8099d7a2cbab20a962f7.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(PayMngr→BaseMngr)</a></li>
-        
-        <li><a href='78fd63a222fe0ae2d0bc482a0b21d7e9.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(UserMngr→BaseMngr)</a></li>
-        
-        <li><a href='28d0626d42c3e93142a47448983254a8.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(BankManager→BaseMngr)</a></li>
-        
-        <li><a href='be534563bd0e56c0cbc98c685b974734.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(DeliveriesManager→BaseMngr)</a></li>
-        
-        <li><a href='68b9bc2a0a337bb735db87fa3ef62c45.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(PayManager→BaseMngr)</a></li>
-        
-        <li><a href='8e83e527f48d7fdb76517889f491a615.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(ProductsManager→BaseMngr)</a></li>
-        
-        <li><a href='5ca68d8506867ebf6d09c6185bf8732d.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(ReferalsManager→BaseMngr)</a></li>
-        
-        <li><a href='02a394c18e889bc98a008ff63a15efd6.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(RequestsManager→BaseMngr)</a></li>
-        
         <li><a href='e4586bfe586b2c98e95e7a67ba8acf33.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(ModeratorsManager→BaseMngr)</a></li>
+        
+        <li><a href='411c89291585f586eccd5f9f89bc2efc.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(ModeratorsManager—main)</a></li>
         
     </ul>
 </section>
@@ -424,6 +435,17 @@
 
       
       
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='e4586bfe586b2c98e95e7a67ba8acf33.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(ModeratorsManager→BaseMngr)</a></li>
+        
+        <li><a href='411c89291585f586eccd5f9f89bc2efc.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(ModeratorsManager—main)</a></li>
+        
+    </ul>
+</section>
+
 
 
       <!-- Diagrams -->

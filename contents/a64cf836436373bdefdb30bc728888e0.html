@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>main</title>
+    <title>logi</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,14 +19,14 @@
 
       <!-- Name Title -->
 
-      <h1>main</h1>
+      <h1>logi</h1>
 
       <!-- Type and Stereotype -->
 
       <section style="margin-top: .5em;">
         <span class="alert alert-info">
-          <span class="node-icon staruml-icon icon-UMLClass"></span>
-          UMLClass
+          <span class="node-icon staruml-icon icon-UMLOperation"></span>
+          UMLOperation
         </span>
         
       </section>
@@ -44,7 +44,10 @@
           <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='98703ac11aa635fc7f9de93809b566c9.html'><span class='node-icon staruml-icon icon-UMLClass'></span>main</a></span>
+          <span class="label label-info"><a href='30976b37469354e1b1448680149543c1.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ModeratorsManager</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='a64cf836436373bdefdb30bc728888e0.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>logi</a></span>
         
       </section>
 
@@ -59,7 +62,21 @@
         <h3>Description</h3>
         <div>
           
-            <p>Класс обработки  входящих запросов</p>
+            <p>Проверяет существование модератора с указанным логином и паролем.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Сессия SQLAlchemy для работы с базой данных.
+login (str): Логин модератора.
+password (str): Пароль модератора.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;message&#39;: Str</code></pre>
+
+<p>Если False:</p>
+
+<pre><code>&#39;error&#39;: Str</code></pre>
           
         </div>
       </section>
@@ -78,26 +95,6 @@
       
 
       <!-- Classifier -->
-
-      
-        
-        
-
-
-        
-        
-
-
-        
-        
-
-
-        
-        
-
-
-        
-        
 
       
 
@@ -132,67 +129,9 @@
       <!-- Attributes -->
 
       
-      <section>
-        <h3>Attributes</h3>
-        <table class="table table-striped table-bordered">
-          <tr>
-            <th>Visibility</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="a5d5a6176096cb48c932246a7d58ced4.html">connection_string</a></td>
-            <td>str </td>
-            <td><p>Сторка подключения к базе данных</p></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="83674b607e24ba1973bea86a29928477.html">services_tg</a></td>
-            <td>dict </td>
-            <td><p>Словарь сервисов</p></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="14befc1988c857dec83bf710bafec68b.html">services_web</a></td>
-            <td>dict </td>
-            <td></td>
-          </tr>
-          
-        </table>
-      </section>
-      
 
       <!-- Operations -->
 
-      
-      <section>
-        <h3>Operations</h3>
-        <table class="table table-striped table-bordered">
-          <tr>
-            <th>Visibility</th>
-            <th>Name</th>
-            <th>Description</th>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="a7b27c7814d1e26bfe597d90428853da.html">handle_request(interfase: str, service: str, method: str)</a></td>
-            <td><p>Запуск метода сервиса </p></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="7616994cd0fc6db5a174eab84f236eaf.html">handle_request_file(file: str, mode: str, serves: str)</a></td>
-            <td><p>Запуск методов обработки файлов</p></td>
-          </tr>
-          
-        </table>
-      </section>
       
 
       <!-- Receptions -->
@@ -205,6 +144,40 @@
 
       <!-- Parameters -->
 
+      
+      <section>
+        <h3>Parameters</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Direction</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="fca8be5cc7bc711975e448c77dd3c944.html">session</a></td>
+            <td>Session </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="7c8f55f3effb4563af159415c22960e6.html">login</a></td>
+            <td>str </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="d3c00ff5e4ae985354882dc7cb658188.html">password</a></td>
+            <td>str </td>
+            <td></td>
+          </tr>
+          
+        </table>
+      </section>
       
 
       <!-- Diagrams -->
@@ -291,7 +264,7 @@
     
     <tr>
         <td>name</td>
-        <td>main</td>
+        <td>logi</td>
     </tr>
     
     
@@ -324,25 +297,8 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     <tr>
-        <td>isAbstract</td>
-        <td><span class='label label-info'>false</span></td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>isFinalSpecialization</td>
+        <td>isStatic</td>
         <td><span class='label label-info'>false</span></td>
     </tr>
     
@@ -360,9 +316,82 @@
     
     
     <tr>
-        <td>isActive</td>
+        <td>featureDirection</td>
+        <td>provided</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>parameters</td>
+        <td>
+            
+            
+            <a href='fca8be5cc7bc711975e448c77dd3c944.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            
+            <span>, </span>
+            <a href='7c8f55f3effb4563af159415c22960e6.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>login</a>
+            
+            <span>, </span>
+            <a href='d3c00ff5e4ae985354882dc7cb658188.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>password</a>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>raisedExceptions</td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>concurrency</td>
+        <td>sequential</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isQuery</td>
         <td><span class='label label-info'>false</span></td>
     </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>specification</td>
+        <td></td>
+    </tr>
+    
+    
+    
+    
+    
+    
     
     
     
@@ -394,37 +423,6 @@
 
       
       
-<section class="element-list">
-    <h3>Relationships</h3>
-    <ul class="nav nav-list">
-        
-        <li><a href='fbe7f290f4e1ff69ad7e912d8c27ae56.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(BonusMngr—main)</a></li>
-        
-        <li><a href='500240cc1ec5c27b9d154d4da9b618d5.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(MarketMngr—main)</a></li>
-        
-        <li><a href='bdcdc06c74342d49c885f059771de005.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(PayMngr—main)</a></li>
-        
-        <li><a href='214e8566670ff447391e5b31715d3613.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(UserMngr—main)</a></li>
-        
-        <li><a href='03ef578a5e51bde866af49df06704fd2.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(BankManager—main)</a></li>
-        
-        <li><a href='8402222f4c02f1327389cc76a3e1d876.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(DeliveriesManager—main)</a></li>
-        
-        <li><a href='768cc8db39d373ac8468db50e30d49ed.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(PayManager—main)</a></li>
-        
-        <li><a href='1720fd712b7d698d16e559d7404373c1.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(ProductsManager—main)</a></li>
-        
-        <li><a href='ab78e997737fa86146a42b7e2ec949a0.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(ReferalsManager—main)</a></li>
-        
-        <li><a href='325ceb3aa287697ca9fb8c0e62fc101c.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(RequestsManager—main)</a></li>
-        
-        <li><a href='5b929f55b1e3833b4229e76eadf6a17b.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Files—main)</a></li>
-        
-        <li><a href='411c89291585f586eccd5f9f89bc2efc.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(ModeratorsManager—main)</a></li>
-        
-    </ul>
-</section>
-
 
 
       <!-- Owned Elements -->
