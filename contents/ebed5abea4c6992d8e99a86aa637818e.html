@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>create_payment</title>
+    <title>__check_payment_status_and_cleanup</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>create_payment</h1>
+      <h1>__check_payment_status_and_cleanup</h1>
 
       <!-- Type and Stereotype -->
 
@@ -47,7 +47,7 @@
           <span class="label label-info"><a href='e1e2d3c59ba7b525a44e7cd021097147.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayMngr</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='39afaf9c143459ed3b0a7fe19579bbfd.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>create_payment</a></span>
+          <span class="label label-info"><a href='ebed5abea4c6992d8e99a86aa637818e.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>__check_payment_status_and_cleanup</a></span>
         
       </section>
 
@@ -62,26 +62,7 @@
         <h3>Description</h3>
         <div>
           
-            <p>Создание оплаты на основе заявки и реквизита, с возможностью указания шага оплаты.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Идентификатор пользователя Telegram.
-request_id (int): Идентификатор заявки.
-requisite_id (int): Идентификатор реквизита.
-step (float, optional): Шаг оплаты. По умолчанию равен 0.
-bonus (bool, optional): Флаг использования бонусов для оплаты. По умолчанию False.</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>&#39;success&#39;: Bool
-&#39;message&#39;: Str
-&#39;payment&#39;:  Int</code></pre>
-
-<p>Если False:</p>
-
-<pre><code>&#39;error&#39;: Str</code></pre>
+            <span class="label label-info">none</span>
           
         </div>
       </section>
@@ -162,46 +143,36 @@ bonus (bool, optional): Флаг использования бонусов дл�
           
           <tr>
             <td>in</td>
-            <td><a href="ac6cfade77fdce2acd5a73084fceceab.html">session</a></td>
+            <td><a href="3dcf25047f5b989f8ebdcf285f616288.html">self</a></td>
+            <td> </td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>in</td>
+            <td><a href="ad0b112ddb9b6c1c03271aa6473e1540.html">session</a></td>
             <td>Session </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="8e0961aebae92404b75d4d1157e04934.html">tgid</a></td>
+            <td><a href="5cc5e0c3cfe036dacb9fde3baa1c1fb8.html">payment_id</a></td>
             <td>int </td>
             <td></td>
           </tr>
           
           <tr>
             <td>in</td>
-            <td><a href="8e63081ca181109036d858c202af5e8b.html">request_id</a></td>
+            <td><a href="ce029191c38687ac59f078af2598eab2.html">delay</a></td>
             <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="41a35bf19e50a582008bb58cc6e93c44.html">requisite_id</a></td>
-            <td>int </td>
-            <td><p>Создание оплаты на основе заявки и реквизита.</p>
+            <td><p>Проверяет статус платежа через указанное количество секунд и удаляет объекты, если выполнены условия.</p>
 
-<pre><code>    Args:
-        session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-        request_id (int): Идентификатор заявки.
-        card_number (str): Номер карты для оплаты.
-        step (float, optional): Шаг оплаты. Defaults to 0.
+<p>Args:</p>
 
-    Returns:
-        JSON: Результат операции в формате JSON.</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="6755f5f658822386afb94a54d8d73890.html">bonus</a></td>
-            <td>int </td>
-            <td></td>
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
+payment_id (int): Идентификатор платежа для проверки.
+delay (int): Время задержки перед проверкой статуса (в секундах). По умолчанию 10 секунд.</code></pre></td>
           </tr>
           
         </table>
@@ -292,7 +263,7 @@ bonus (bool, optional): Флаг использования бонусов дл�
     
     <tr>
         <td>name</td>
-        <td>create_payment</td>
+        <td>__check_payment_status_and_cleanup</td>
     </tr>
     
     
@@ -357,19 +328,16 @@ bonus (bool, optional): Флаг использования бонусов дл�
         <td>
             
             
-            <a href='ac6cfade77fdce2acd5a73084fceceab.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
+            <a href='3dcf25047f5b989f8ebdcf285f616288.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>self</a>
             
             <span>, </span>
-            <a href='8e0961aebae92404b75d4d1157e04934.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
+            <a href='ad0b112ddb9b6c1c03271aa6473e1540.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
             <span>, </span>
-            <a href='8e63081ca181109036d858c202af5e8b.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>request_id</a>
+            <a href='5cc5e0c3cfe036dacb9fde3baa1c1fb8.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>payment_id</a>
             
             <span>, </span>
-            <a href='41a35bf19e50a582008bb58cc6e93c44.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>requisite_id</a>
-            
-            <span>, </span>
-            <a href='6755f5f658822386afb94a54d8d73890.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>bonus</a>
+            <a href='ce029191c38687ac59f078af2598eab2.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>delay</a>
             
         </td>
     </tr>
