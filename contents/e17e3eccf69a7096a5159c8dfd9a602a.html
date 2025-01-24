@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>create_payment</title>
+    <title>section_id</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,14 +19,14 @@
 
       <!-- Name Title -->
 
-      <h1>create_payment</h1>
+      <h1>section_id</h1>
 
       <!-- Type and Stereotype -->
 
       <section style="margin-top: .5em;">
         <span class="alert alert-info">
-          <span class="node-icon staruml-icon icon-UMLOperation"></span>
-          UMLOperation
+          <span class="node-icon staruml-icon icon-UMLParameter"></span>
+          UMLParameter
         </span>
         
       </section>
@@ -44,10 +44,13 @@
           <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='e1e2d3c59ba7b525a44e7cd021097147.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayMngr</a></span>
+          <span class="label label-info"><a href='e3494d49f42fbc1599682059d5b5e1c0.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ProductsManager</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='39afaf9c143459ed3b0a7fe19579bbfd.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>create_payment</a></span>
+          <span class="label label-info"><a href='6e07452366656c662db8fb2ec41e3ad8.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>get_categories</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='e17e3eccf69a7096a5159c8dfd9a602a.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>section_id</a></span>
         
       </section>
 
@@ -62,24 +65,7 @@
         <h3>Description</h3>
         <div>
           
-            <p>Создание оплаты на основе заявки и реквизита, с возможностью указания шага оплаты.</p>
-
-<p>Args:</p>
-
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-request_id (int): Идентификатор заявки.
-requisite_id (int): Идентификатор реквизита.
-step (float, optional): Шаг оплаты. По умолчанию равен 0.</code></pre>
-
-<p>Returns:</p>
-
-<pre><code>&#39;success&#39;: Bool
-&#39;message&#39;: Str
-&#39;payment&#39;:  Int</code></pre>
-
-<p>Если False:</p>
-
-<pre><code>&#39;error&#39;: Str</code></pre>
+            <span class="label label-info">none</span>
           
         </div>
       </section>
@@ -147,63 +133,6 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
 
       <!-- Parameters -->
 
-      
-      <section>
-        <h3>Parameters</h3>
-        <table class="table table-striped table-bordered">
-          <tr>
-            <th>Direction</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="ac6cfade77fdce2acd5a73084fceceab.html">session</a></td>
-            <td>Session </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="8e0961aebae92404b75d4d1157e04934.html">tgid</a></td>
-            <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="8e63081ca181109036d858c202af5e8b.html">request_id</a></td>
-            <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="41a35bf19e50a582008bb58cc6e93c44.html">requisite_id</a></td>
-            <td>int </td>
-            <td><p>Создание оплаты на основе заявки и реквизита.</p>
-
-<pre><code>    Args:
-        session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-        request_id (int): Идентификатор заявки.
-        card_number (str): Номер карты для оплаты.
-        step (float, optional): Шаг оплаты. Defaults to 0.
-
-    Returns:
-        JSON: Результат операции в формате JSON.</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="6755f5f658822386afb94a54d8d73890.html">step</a></td>
-            <td>float </td>
-            <td></td>
-          </tr>
-          
-        </table>
-      </section>
       
 
       <!-- Diagrams -->
@@ -290,7 +219,7 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
     
     <tr>
         <td>name</td>
-        <td>create_payment</td>
+        <td>section_id</td>
     </tr>
     
     
@@ -351,25 +280,8 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
     
     
     <tr>
-        <td>parameters</td>
-        <td>
-            
-            
-            <a href='ac6cfade77fdce2acd5a73084fceceab.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
-            
-            <span>, </span>
-            <a href='8e0961aebae92404b75d4d1157e04934.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
-            
-            <span>, </span>
-            <a href='8e63081ca181109036d858c202af5e8b.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>request_id</a>
-            
-            <span>, </span>
-            <a href='41a35bf19e50a582008bb58cc6e93c44.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>requisite_id</a>
-            
-            <span>, </span>
-            <a href='6755f5f658822386afb94a54d8d73890.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>step</a>
-            
-        </td>
+        <td>type</td>
+        <td>int</td>
     </tr>
     
     
@@ -377,45 +289,7 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
     
     
     <tr>
-        <td>raisedExceptions</td>
-        <td>
-            
-        </td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>concurrency</td>
-        <td>sequential</td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>isQuery</td>
-        <td><span class='label label-info'>false</span></td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>isAbstract</td>
-        <td><span class='label label-info'>false</span></td>
-    </tr>
-    
-    
-    
-    
-    
-    <tr>
-        <td>specification</td>
+        <td>multiplicity</td>
         <td></td>
     </tr>
     
@@ -423,7 +297,46 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
     
     
     
+    <tr>
+        <td>isReadOnly</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
     
+    
+    
+    
+    
+    <tr>
+        <td>isOrdered</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isUnique</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>defaultValue</td>
+        <td>None</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>direction</td>
+        <td>in</td>
+    </tr>
     
     
     
@@ -467,15 +380,6 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
       
       
       
-<section class="element-list">
-    <h3>Diagrams</h3>
-    <ul class="nav nav-list">
-        
-        <li><a href='a74bf0e3699da3f8e58beeb19b53e20a.html'><span class='node-icon staruml-icon icon-UMLClassDiagram'></span>CRM_0.7</a></li>
-        
-    </ul>
-</section>
-
 
       
       

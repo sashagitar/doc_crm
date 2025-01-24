@@ -197,17 +197,15 @@ step (float): Шаг, который должен уместиться в ост
           
           <tr>
             <td>public</td>
-            <td><a href="39afaf9c143459ed3b0a7fe19579bbfd.html">create_payment(session: Session, tgid: int, request_id: int, requisite_id: int, bonus: int = 0)</a></td>
+            <td><a href="39afaf9c143459ed3b0a7fe19579bbfd.html">create_payment(session: Session, tgid: int, request_id: int, requisite_id: int, step: float = 0)</a></td>
             <td><p>Создание оплаты на основе заявки и реквизита, с возможностью указания шага оплаты.</p>
 
 <p>Args:</p>
 
 <pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-tgid (int): Идентификатор пользователя Telegram.
 request_id (int): Идентификатор заявки.
 requisite_id (int): Идентификатор реквизита.
-step (float, optional): Шаг оплаты. По умолчанию равен 0.
-bonus (bool, optional): Флаг использования бонусов для оплаты. По умолчанию False.</code></pre>
+step (float, optional): Шаг оплаты. По умолчанию равен 0.</code></pre>
 
 <p>Returns:</p>
 
@@ -235,12 +233,6 @@ tgid (int): Telegram ID пользователя.</code></pre>
 
 <pre><code> &#39;status&#39;:  Int
 &#39;wait_time&#39;: Int</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>public</td>
-            <td><a href="ebed5abea4c6992d8e99a86aa637818e.html">__check_payment_status_and_cleanup(self, session: Session, payment_id: int, delay: int = 10)</a></td>
-            <td></td>
           </tr>
           
         </table>

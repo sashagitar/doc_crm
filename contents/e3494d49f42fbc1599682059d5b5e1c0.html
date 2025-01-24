@@ -156,6 +156,82 @@
           
           <tr>
             <td>public</td>
+            <td><a href="37e62694756652a9ac1d6c94124db3f4.html">get_sections(session: Session)</a></td>
+            <td><p>Получение списка разделов товаров из базы данных.</p>
+
+<pre><code>    Данный метод запрашивает у сессии базы данных все записи разделов и
+    возвращает их в виде списка словарей, содержащих идентификатор и имя раздела.</code></pre>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>List {
+    &#39;id&#39;: Int
+    &#39;name&#39;: Str
+}</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="6e07452366656c662db8fb2ec41e3ad8.html">get_categories(session: Session, section_id: int = None)</a></td>
+            <td><p>Получение списка категорий товаров из базы данных.</p>
+
+<p>Данный метод запрашивает у сессии базы данных все записи категорий и
+возвращает их в виде списка словарей, содержащих идентификатор и имя категории.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (int, optional): Идентификатор раздела для фильтрации категорий.
+                                 Если None, возвращаются все категории.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;id&#39;: Int
+&#39;name&#39;: Str
+&#39;image_path&#39;: Str</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="a27935197398adaae3df1580139c01ff.html">get_brands(session: Session, section_id: int = None)</a></td>
+            <td><p>Получение списка уникальных брендов из базы данных.</p>
+
+<p>Данный метод запрашивает у сессии базы данных уникальные записи брендов из таблицы товаров и
+возвращает их в виде списка словарей, содержащих название бренда.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+ section_id (int, optional): Идентификатор раздела для фильтрации брендов.
+                                 Если None, возвращаются все уникальные бренды.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>List[Str]</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="a0df7a92652f1ee49c4368eb814d4a61.html">get_price_range(session: Session, section_id: int = None)</a></td>
+            <td><p>Получает минимальную и максимальную цену по всей базе данных или по конкретному разделу.</p>
+
+<p>Args:</p>
+
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.
+section_id (Optional[int]): Идентификатор раздела. Если не указан, возвращает диапазон цен по всей базе данных.</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>&#39;max_price&#39;: Float
+&#39;min_price&#39;: Float</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
             <td><a href="a09ad38eec20ae180711a52449b96b19.html">add_product(session: Session, link: str, category_id: int, brand: str, model: str, sku: str, is_visible: bool, sections: list, sizes: dict)</a></td>
             <td><p>Добавляет новый товар в базу данных.</p>
 
@@ -185,9 +261,19 @@ sizes (dict): Список размеров товара. {size: str, price: flo
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-product_id (int): Идентификатор товара.
-changes (dict): Словарь изменений, содержащий поля для обновления и их новые значения.</code></pre>
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.</code></pre>
+
+<p>product<em>id (int): Идентификатор товара.
+changes (dict): Словарь изменений, содержащий поля для обновления и их новые значения.
+            Может включать:
+            - Основные поля товара (link, category</em>id, brand, model, sku, is_visible).
+            - Разделы (sections): Список идентификаторов разделов для обновления.</p>
+
+<p>{
+    &#39;brand&#39;: &#39;New Brand&#39;,
+    &#39;model&#39;: &#39;Updated Model&#39;,
+    &#39;sections&#39;: [1, 2, 3]  # Новые разделы для товара
+}</p>
 
 <p>Returns:</p>
 
@@ -224,11 +310,20 @@ product_id (int): Идентификатор товара.</code></pre>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-filters (dict, optional): Словарь с фильтрами для запроса товаров.
-{
-    &#39;category_ids&#39;: List(Int),
-    &#39;is_archived&#39;: Bool
+<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.</code></pre>
+
+<p>filters (dict): Словарь с фильтрами для запроса товаров.
+    Может включать:
+    - category<em>ids: Список идентификаторов категорий.
+    - is</em>archived: Флаг архивированности товара.
+    - brand: Бренд товара (поиск по точному совпадению).
+    - model: Модель товара (поиск по частичному совпадению).</p>
+
+<pre><code>{
+    &#39;brand&#39;: &#39;Nike&#39;,  # Поиск по бренду &quot;Nike&quot;
+    &#39;model&#39;: &#39;Air&#39;,   # Поиск по модели, содержащей &quot;Air&quot;
+    &#39;category_ids&#39;: [1, 2, 3],  # Фильтр по категориям
+    &#39;is_archived&#39;: False  # Только неархивированные товары
 }</code></pre>
 
 <p>Returns:</p>

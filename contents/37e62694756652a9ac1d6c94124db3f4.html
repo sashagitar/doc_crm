@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>create_payment</title>
+    <title>get_sections</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>create_payment</h1>
+      <h1>get_sections</h1>
 
       <!-- Type and Stereotype -->
 
@@ -44,10 +44,10 @@
           <span class="label label-info"><a href='594af663de577680f35b13183109d675.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Model</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='e1e2d3c59ba7b525a44e7cd021097147.html'><span class='node-icon staruml-icon icon-UMLClass'></span>PayMngr</a></span>
+          <span class="label label-info"><a href='e3494d49f42fbc1599682059d5b5e1c0.html'><span class='node-icon staruml-icon icon-UMLClass'></span>ProductsManager</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='39afaf9c143459ed3b0a7fe19579bbfd.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>create_payment</a></span>
+          <span class="label label-info"><a href='37e62694756652a9ac1d6c94124db3f4.html'><span class='node-icon staruml-icon icon-UMLOperation'></span>get_sections</a></span>
         
       </section>
 
@@ -62,24 +62,21 @@
         <h3>Description</h3>
         <div>
           
-            <p>Создание оплаты на основе заявки и реквизита, с возможностью указания шага оплаты.</p>
+            <p>Получение списка разделов товаров из базы данных.</p>
+
+<pre><code>    Данный метод запрашивает у сессии базы данных все записи разделов и
+    возвращает их в виде списка словарей, содержащих идентификатор и имя раздела.</code></pre>
 
 <p>Args:</p>
 
-<pre><code>session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-request_id (int): Идентификатор заявки.
-requisite_id (int): Идентификатор реквизита.
-step (float, optional): Шаг оплаты. По умолчанию равен 0.</code></pre>
+<pre><code>session (Session): Объект сессии SQLAlchemy для взаимодействия с базой данных.</code></pre>
 
 <p>Returns:</p>
 
-<pre><code>&#39;success&#39;: Bool
-&#39;message&#39;: Str
-&#39;payment&#39;:  Int</code></pre>
-
-<p>Если False:</p>
-
-<pre><code>&#39;error&#39;: Str</code></pre>
+<pre><code>List {
+    &#39;id&#39;: Int
+    &#39;name&#39;: Str
+}</code></pre>
           
         </div>
       </section>
@@ -160,45 +157,8 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
           
           <tr>
             <td>in</td>
-            <td><a href="ac6cfade77fdce2acd5a73084fceceab.html">session</a></td>
+            <td><a href="e10b185a6efb8a30d9c5924dec797223.html">session</a></td>
             <td>Session </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="8e0961aebae92404b75d4d1157e04934.html">tgid</a></td>
-            <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="8e63081ca181109036d858c202af5e8b.html">request_id</a></td>
-            <td>int </td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="41a35bf19e50a582008bb58cc6e93c44.html">requisite_id</a></td>
-            <td>int </td>
-            <td><p>Создание оплаты на основе заявки и реквизита.</p>
-
-<pre><code>    Args:
-        session (Session): Сессия SQLAlchemy для выполнения запросов к базе данных.
-        request_id (int): Идентификатор заявки.
-        card_number (str): Номер карты для оплаты.
-        step (float, optional): Шаг оплаты. Defaults to 0.
-
-    Returns:
-        JSON: Результат операции в формате JSON.</code></pre></td>
-          </tr>
-          
-          <tr>
-            <td>in</td>
-            <td><a href="6755f5f658822386afb94a54d8d73890.html">step</a></td>
-            <td>float </td>
             <td></td>
           </tr>
           
@@ -290,7 +250,7 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
     
     <tr>
         <td>name</td>
-        <td>create_payment</td>
+        <td>get_sections</td>
     </tr>
     
     
@@ -355,19 +315,7 @@ step (float, optional): Шаг оплаты. По умолчанию равен 
         <td>
             
             
-            <a href='ac6cfade77fdce2acd5a73084fceceab.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
-            
-            <span>, </span>
-            <a href='8e0961aebae92404b75d4d1157e04934.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>tgid</a>
-            
-            <span>, </span>
-            <a href='8e63081ca181109036d858c202af5e8b.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>request_id</a>
-            
-            <span>, </span>
-            <a href='41a35bf19e50a582008bb58cc6e93c44.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>requisite_id</a>
-            
-            <span>, </span>
-            <a href='6755f5f658822386afb94a54d8d73890.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>step</a>
+            <a href='e10b185a6efb8a30d9c5924dec797223.html'><span class='node-icon staruml-icon icon-UMLParameter'></span>session</a>
             
         </td>
     </tr>
